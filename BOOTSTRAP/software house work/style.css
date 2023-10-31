@@ -1,0 +1,699 @@
+@import url("https://fonts.googleapis.com/css2?family=Imprima&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Imprima", sans-serif;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+#header a {
+  font-size: 18px;
+  margin: 0px 10px;
+}
+#header svg {
+  font-size: 30px;
+  color: black;
+  font-weight: 800;
+}
+#header .nav-icon {
+  padding: 8px 12px;
+  background-color: rgba(25, 26, 25, 0.321);
+}
+#header .navbar-toggler {
+  border: none !important;
+  margin-right: 10px;
+  outline: none !important;
+}
+#header .navbar-toggler {
+  border: none !important;
+  margin-right: 10px;
+  outline: none !important;
+}
+#header .nav-icon svg {
+  color: black;
+  font-weight: 800;
+}
+#header .nav-icon svg:hover {
+  color: white;
+}
+
+/* <!-- header-content --> */
+#section {
+  width: 100%;
+  height: 100vh !important;
+  position: relative !important;
+}
+#section-img {
+  width: 100%;
+  height: 100vh !important;
+  overflow: hidden;
+}
+
+.div-img1 {
+  width: 100%;
+  height: inherit;
+  background-size: cover;
+  background-position: center;
+  scale: 1.3;
+  animation: slideAnimation 30s infinite;
+}
+@keyframes slideAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+#section #section-img {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section .section-count {
+  background-color: #caa7898c;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #e9e9e9;
+  padding: 10px 0px;
+}
+#section p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #c3c3c3;
+  margin-bottom: 20px;
+}
+
+#section .section-btn button:nth-child(1) {
+  width: 33%;
+  text-transform: uppercase;
+  background-color: #caa789;
+  font-size: 25px;
+  font-weight: 400;
+  border: none;
+  border-radius: 0px;
+  margin-right: 30px;
+}
+
+#section .section-btn button:nth-child(2) {
+  width: 33%;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 800;
+  border: 2px solid #7f653f;
+  border-radius: 0px;
+  color: white;
+}
+#section .section-btn button:hover {
+  scale: 1.1;
+  transform: rotate(5deg);
+  transition: 0.5s;
+}
+#section .section-btn .btn:hover {
+  scale: 1.1;
+  transform: rotate(5deg);
+  transition: 0.5s;
+}
+#section .section-btn button:nth-child(2):hover {
+  color: #caa789;
+  scale: 1.1;
+  transform: rotate(5deg);
+  transition: 0.5s, color 0s;
+}
+
+#section .section-icon button {
+  border-color: white;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-radius: 0;
+  font-size: 10px;
+  color: white;
+  font-weight: 600;
+  padding: 6px 15px;
+}
+
+#section .section-icon button:hover {
+  border-color: #caa789;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-radius: 0;
+  font-size: 10px;
+  color: #caa789;
+  font-weight: 600;
+  padding: 6px 15px;
+}
+
+/* bniography section */
+#biograph {
+  width: 100%;
+  background: url(https://soundgarden.webbuggsdev.com/wp-content/uploads/2023/05/back-1.jpg)
+    0 0 no-repeat;
+  height: auto;
+  background-size: cover;
+}
+
+#biograph .biog-img1 {
+  transform: translateY(-50px);
+}
+#biograph .biograph-content h4 {
+  color: #e9e9e9;
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+}
+h4 {
+  color: #e9e9e9;
+  font-family: "Imprima", Sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+h3 {
+  color: #e9e9e9;
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+}
+h5 {
+  color: #ffffff;
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+p {
+  color: #c3c3c3;
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  margin-bottom: 14.4px;
+}
+#biograph .timer-section .timer .time-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  padding: 5px 20px;
+  color: white;
+  font-family: "Imprima", Sans-serif;
+}
+#biograph .timer-section .timer .time-title2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
+}
+#biograph .timer-section {
+  padding-top: 200px 0px;
+  margin-top: 20px;
+}
+#biograph .timer-section .timer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOUR section */
+
+#TOUR .tour-content {
+  background: linear-gradient(0deg, rgba(33, 25, 30, 0.3), rgba(6, 3, 5, 0.3)),
+    url(https://soundgarden.webbuggsdev.com/wp-content/uploads/2023/05/IMG_8410.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 10px;
+}
+#TOUR .tour-btn {
+  text-transform: uppercase;
+  background-color: #caa789;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  border-radius: 0px;
+  margin-right: 30px;
+  color: white;
+  padding: 10px 30px;
+}
+#TOUR .tour-btn:hover {
+  color: white;
+  scale: 1.1;
+  transform: rotate(5deg);
+  transition: 0.5s, color 0s;
+}
+
+.tour-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.location-text {
+  font-family: "Imprima", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+/* video section */
+#video {
+  width: 100%;
+  background: url(https://soundgarden.webbuggsdev.com/wp-content/uploads/2023/05/back-1.jpg)
+    0 0 no-repeat;
+  height: auto;
+  background-size: cover;
+}
+#video .video-content .video-icon span i {
+  margin: 0px 3px;
+}
+#video .video-content .video-icon span {
+  font-family: "Imprima", Sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #c3c3c370;
+  margin: 0px 5px;
+}
+
+h5 {
+  color: #e9e9e9;
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+#video .video-content .video-testimonil {
+  background-color: #1e203c;
+  border: 1px solid white;
+}
+#video .video-content .video-testimonil .testomonial-header {
+  font-family: "Imprima", Sans-serif;
+  font-size: 18px;
+  border-bottom: 5px solid #e9e9e9;
+  padding: 15px 15px 6px;
+}
+#video .video-content .video-testimonil .testomonial-header .testomonial-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#video
+  .video-content
+  .video-testimonil
+  .testomonial-header
+  .testomonial-img
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#video .video-content .video-testimonil .testomonial-header .testomonial-name {
+  font-family: "Imprima", Sans-serif;
+  font-size: 18px;
+  color: #e9e9e9;
+}
+#video .video-content .video-testimonil .testomonial-header .testomonial-email {
+  color: #697882;
+  font-size: 12.5px;
+  font-weight: 400;
+  font-family: inherit;
+}
+#video .video-content .video-testimonil .testomonial-footer {
+  font-size: 14px;
+  line-height: 20px;
+  color: #e9e9e9;
+  padding: 15px 15px;
+}
+#video span {
+  font-family: "Imprima", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+#video .video-slider img {
+  height: 200px;
+  width: 100%;
+}
+#video .video-slider .img-slide {
+  position: relative;
+  margin: 0px 5px;
+}
+#video .video-slider .img-slide .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.807);
+}
+
+.slick-slider {
+  position: relative;
+}
+.video-btn-p,
+.video-btn-n {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 500;
+}
+.video-btn-p {
+  left: 2%;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+.video-btn-n {
+  right: 2%;
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+/* <!-- price-content --> */
+
+#price {
+  width: 100%;
+  background: url(https://soundgarden.webbuggsdev.com/wp-content/uploads/2023/05/back-1.jpg)
+    0 0 no-repeat;
+  height: auto;
+  background-size: cover;
+}
+#price .price-container {
+  width: 100%;
+  background-size: 100% 100% !important;
+}
+
+#price .price-container .price-content {
+  background-color: #040724;
+}
+#price .price-container .price-content .price-content-heading h5 {
+  color: #ff00ab;
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 30px 0px 15px;
+}
+#price .price-container .price-content .price-doller {
+  font-size: 18px;
+  color: #00a2ff !important;
+  margin: 0px 3px 0px 0px;
+}
+#price .price-container .price-content .price-content-price {
+  border-top: 1px solid rgb(144, 135, 135);
+  border-bottom: 0.1px solid rgba(135, 133, 133, 0.739);
+}
+#price .price-container .price-content .price {
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 60px;
+  color: #00a2ff;
+  padding: 0px 0px 1px 0px;
+  margin-bottom: 0;
+}
+.price sup {
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 30px;
+  color: #00a2ff;
+  margin-left: -10px;
+}
+.price-content-list {
+  padding: 50px 50px 15px 50px;
+  list-style-type: none;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.price-content-list li {
+  color: #c3c3c3;
+  margin-bottom: 10px;
+}
+.price-content-list i {
+  margin-right: 5px;
+}
+#price .tour-btn {
+  text-transform: uppercase;
+  background-color: #caa789;
+  font-size: 16px;
+  font-weight: 400;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  padding: 10px 30px;
+  margin-left: auto;
+}
+#price .tour-btn:hover {
+  color: white;
+  scale: 1.1;
+  transform: rotate(5deg);
+  transition: 0.5s, color 0s;
+}
+#price .btn-price {
+  padding: 30px 0px 50px 0px;
+}
+
+/* discover section */
+
+#gallery {
+  width: 100%;
+  background: url(https://soundgarden.webbuggsdev.com/wp-content/uploads/2023/05/back-1.jpg)
+    0 0 no-repeat;
+  height: auto;
+  background-size: cover;
+}
+#gallery .gallery-content a {
+  font-family: "Imprima", Sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px 15px;
+  color: #c3c3c3;
+  text-decoration: none;
+  padding: 7px 14px;
+  border-top: 3px solid #caa789;
+  border-bottom: 3px solid #caa789;
+  transition: border 0.5s;
+}
+
+#gallery .gallery-img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+}
+
+#gallery .gallery-img img {
+  width: 100% !important;
+  scale: 1.2;
+  transition: transform 0.5s ease-in-out;
+
+}
+.gallery-img .overlay-img{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background: #7a5b2d66;
+  transition: top 0.9s;
+
+}
+/* .gallery-img .overlay-img:hover{
+  bottom: 0% !important;
+} */
+
+
+/* #gallery .gallery-img img:hover {
+  transform: translateY(-10px);
+  background: red !important;
+  z-index: 555;
+} */
+
+/* discover section */
+
+#discover {
+  width: 100%;
+  background: url(https://soundgarden.webbuggsdev.com/wp-content/uploads/2023/05/back-1.jpg)
+    0 0 no-repeat;
+  height: auto;
+  background-size: cover;
+}
+#discover p {
+  color: #c3c3c3;
+  font-family: "Imprima", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#discover h6 {
+  color: #e9e9e9;
+  font-family: "Imprima", Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#discover .discover-icon i {
+  background-color: #caa789;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  color: white;
+}
+#discover .discover-icon i:hover {
+  background-color: #7f653f;
+  transform: translateY(-10px);
+}
+#discover .discover-right h5 {
+  color: #e9e9e9;
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+#discover .discover-right p {
+  text-align: left;
+  color: #c3c3c3;
+  font-family: "Imprima", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+#discover .discover-right i {
+  text-align: left;
+  color: #c3c3c354;
+  font-size: 15px;
+}
+#discover .discover-right span {
+  text-align: left;
+  color: #c3c3c34e;
+  font-size: 16px;
+}
+#discover .discover-silder {
+  position: relative;
+}
+#discover .discover-right .discover-silder i {
+  background-color: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+#discover .discover-right .custom-prev,
+.custom-next {
+  position: absolute;
+  background: none;
+  border: none;
+}
+#discover .discover-right .custom-prev {
+  top: 50%;
+  z-index: 22;
+  right: 92%;
+  transform: translateY(-50%);
+}
+#discover .discover-right .custom-next {
+  position: absolute;
+  top: 50%;
+  left: 92%;
+  transform: translateY(-50%);
+  z-index: 22;
+}
+
+.line {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #7f653f;
+  box-shadow: 1px 1px 10px 0px #7b623d;
+}
+.line::after {
+  content: "";
+  width: 90%;
+  height: 3px;
+  display: block;
+  background-color: #caa789;
+  margin-left: auto;
+  transform: translateY(-1px);
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px 0px #fbda6d;
+}
+
+/* footer section */
+
+#footer {
+  background-color: #000000;
+  background-image: url(https://soundgarden.webbuggsdev.com/wp-content/uploads/2023/05/IMG_8383.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer .footer-content h5 {
+  font-family: "Expletus Sans", Sans-serif;
+  font-size: 32px;
+  color: white;
+  font-weight: 1000;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+#footer .footer-content p {
+  font-size: 16px;
+  color: #c3c3c3;
+  margin-bottom: 20px;
+}
+#footer .f-btn {
+  border-radius: none;
+  background-color: #caa789;
+  color: white;
+  font-weight: 800;
+}
+#footer input::placeholder {
+  color: #c3c3c3;
+  padding: 10px;
+}
+#footer input {
+  color: #c3c3c3;
+  background-color: #c3c3c370;
+  border: none;
+  height: 45px;
+}
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+.f-btn:hover {
+  background-color: initial;
+  box-shadow: none;
+}
+.form-control,
+.f-btn {
+  border-radius: 0;
+}
+
+/* footer2 section */
+
+#footer2 h6 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.wrapper-icon i {
+  padding: 0px 5px;
+  color: #333333a8;
+}

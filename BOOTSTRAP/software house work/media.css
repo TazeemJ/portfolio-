@@ -1,0 +1,32 @@
+@media (max-width :992px) {
+ .discover-silder div{
+    height: 300px;
+ }   
+ .discover-silder div img{
+    height: 300px !important;
+ }   
+}
+@media (max-width :784px) {
+   #gallery .gallery-img {
+      width: 100%;
+      height: 100%  !important;
+     
+    }
+.header-heading{
+        font-size: 70px !important
+    }
+    
+ .discover-silder div{
+    height: 400px;
+    margin: 0px;
+}   
+ .discover-silder div img{
+     height: 450px !important;
+    
+ }   
+}
+@media (max-width :768px) {
+   #biograph .biog-img1{
+      transform: translateY(-0px);
+      }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function addtion(a,b,c,d) {
+
+        // }
+
+        // let a = addtion(5, 6)
+        // console.log(a);
+
+
+
+
+        // reverse string 
+
+        // function reverse(string) {
+        //     var splitvalue = string.split("")
+        //     var array =[];
+        //     for (var i =splitvalue.length-1; i >= 0; i--) {
+        //         // return splitvalue[i]
+        //         array.push([
+        //             splitvalue[i]
+        //         ])
+        //     }
+        //     let strings = array.join("")
+        //     return strings;
+        // }
+        // let print = reverse("Hello World");
+        // console.log(print);
+
+
+        // longgest word
+
+        // function longestword(str) {
+        //     let tokens = str.split(" ");
+        //     longword = ""
+        //     word = 0;
+        //     for (var i = 0; i < tokens.length; i++) {
+        //         if (word < tokens[i].length) {
+        //             word = tokens[i].length
+        //             longword = tokens[i];
+        //         }
+        //     }
+        //     return longword;
+
+
+        // }
+        // let print = longestword("Hello my name is javascript and i f  lot of minds wo defit me")
+        // console.log(print)
+
+
+
+        // objects function 
+
+
+
+        function objets(str) {
+            splitvalue = str.split("")
+            let obj = {}
+            let value = 0;
+            for (var i = 0; i < splitvalue.length; i++) {
+                obj[splitvalue[i]] = 0
+                
+            }           
+            for (let j = 0; j < splitvalue.length; j++) {
+                obj[splitvalue[j]]+=1
+            }
+
+            return obj;
+        }
+        let print = objets("Hello  kya hall haJanab");
+        console.log(print);
+    </script>
+</body>
+
+</html>

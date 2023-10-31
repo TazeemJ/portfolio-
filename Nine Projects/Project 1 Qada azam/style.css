@@ -1,0 +1,102 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+  background-color: rgb(251, 176, 253);
+  width: 100%;
+  padding: 10px;
+  min-height: 100vh;
+
+}
+.sub-container{
+  border: 2px solid pink;
+  border-radius: 5px;
+  max-width: 70%;
+  margin: 10px  auto;
+  box-shadow: 1px 1px 75px 1px rgba(0, 0, 0, 0.26);
+}
+.div-flex{
+  padding: 50px 0px 20px 0px;
+  display: flex;
+  gap: 100px;}
+
+.flex-1
+{ width: 30%;
+  padding: 20px;
+} img{
+  border-radius: 50%;
+  overflow: hidden; 
+}
+.flex-2{
+  width: 70%;
+  padding: 20px;
+  align-self: center;
+  text-align: right;
+}
+.flex-2 h3{
+  letter-spacing: 6px;
+  font-weight: 800;
+  font-size: 35px;
+}
+.flex-2 p{
+  font-weight: 500;
+  font-size: 20px;
+  padding: 20px 0px 10px 0px;
+}
+.about-section{
+  width: 100%;
+  padding: 20px 25px 10px 25px;
+}
+.about-section h1{
+  font-weight: 400;
+  font-size: 60px;
+  letter-spacing: 2px;
+ margin: 10px 0px 20px 0px ;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.about-section p{
+  font-size: 20px;
+  text-align: justify;
+  word-spacing: 8px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+.about-sec-2{
+  width: 100%;
+  padding: 20px 15px 10px 25px;
+}
+.about-sec-2 h3{
+  font-size: 30px;
+}
+.about-sec-2 ul {
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  line-height: 2;
+}
+.about-sec-2 p{
+  text-align: right;
+  margin: 20px 0px 10px 20px;
+}
+@media only screen and (max-width: 920px) {
+  .flex-2 h3{
+    letter-spacing: 6px;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .about-section h1{
+    letter-spacing: 6px;
+    font-weight: 700;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .div-flex{
+    display:block;
+    text-align: center;
+    font-size: 30px;
+  }
+}

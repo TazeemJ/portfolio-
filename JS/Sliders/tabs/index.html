@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <div class="tab"></div>
+        <div class="tab"></div>
+        <div class="tab"></div>
+        <div class="tab"></div>
+        <div class="tab"></div>
+       
+      </div>
+      <div class="tabspages">
+        <div class="tabspage active">
+          <h1>Page 1</h1>
+          <p>Lorem ipsum dolor sit,  Voluptate cupiditate vel laudantium, accusamus ipsa beatae recusandae obcaecati molestias saepe!</p>
+        </div>
+        <div class="tabspage">
+            <h1>Page 2</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem cupiditate dignissimos soluta modi aliquid. Voluptate cupiditate vel laudantium, accusamus ipsa beatae recusandae obcaecati molestias saepe!</p>
+        </div>
+        <div class="tabspage">
+            <h1>Page 3</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.  accusamus ipsa beatae recusandae obcaecati molestias saepe!</p>
+        </div>
+        
+        <div class="tabspage">
+            <h1>Page 4</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem cupiditate dignissimos soluta modi aliquid </p>
+            </div>
+               <div class="tabspage">
+            <h1>Page 5</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem cupiditate d vel laudantium, accusamus ipsa beatae recusandae obcaecati molestias saepe!</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let tabs = document.querySelectorAll(".tab");
+      let tabspages = document.querySelectorAll(".tabspage");
+
+      tabs[0].style.opacity = "1";
+      tabs.forEach(function(tab,index){
+        tab.addEventListener("click", function () {
+            removeOP();
+            tab.style.opacity = "1";
+            tab.style.transition = "0.1s ease-in-out";
+          tabspages[index].classList.add("active")
+            
+        });
+        
+    });
+    function removeOP() {
+        tabs.forEach(function (tab) {
+            tab.style.opacity = "0.8";
+            tabspages.forEach(page => {
+              page.classList.remove("active")
+            })
+        });
+    }
+    </script>
+  </body>
+</html>

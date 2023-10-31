@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- page title -->
+
+    <title>Shope Online</title>
+
+    <!-- bootstrap link -->
+ 
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- font link -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+
+
+
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <style>
+   #sumsung .active{
+   background-color: #1E293B;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+.newset{
+     position: relative;
+
+ }
+ .icons{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    
+ 
+ }
+ .hove-icon:hover{
+    color: #e31b23;
+    font-weight: 800;
+ }
+ @media (max-width:984px) {
+    .product-inforamtion{
+        background-color: #1E293B;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        padding: 30px;
+    }
+ }
+  </style>
+  
+  <body>
+
+    <!--*========================== NavBar coding start =================================-->
+    
+    <header id="header" >
+      <div class="col-2" id="cartDiv" style="background-color: rgb(15, 23, 42) ;">
+      <div class="row py-0 px-2">
+      <div class="col-6 py-2">
+        <span style="font-size: 10px;color: white;" id="chartCounter">0 <span>Product</span></span>
+      </div>
+      <div class="col-6 text-end">
+        <a href="" class="btn py-2 px-1" style="color: #0d4c76; font-size: 12px;padding: 20px;">See all</a>
+      </div>
+      <div id="cartText" class="text-center" style="color: #686d6f;">cart is empty</div>
+      </div>
+      </div>
+  <nav class="navbar navbar-expand-md" id="nav">
+    <div class="container-fluid p-0 m-0">
+      <span class="d-block d-md-none px-3 py-1"><i class="fa-solid fa-bars icon"></i></span>
+      <a class="navbar-brand " href="index.html"><img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2FlogoShop.png&w=128&q=75" alt=""></a>
+      <button class="navbar-toggler left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="menu-icon icon "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+              <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+              <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+            </svg></div>
+      </button>
+      <span class="collapse navbar-collapse " id="navbayrNav">
+        <div class="center w-100 d-none d-md-block" style="height: 51px;">
+          <div class="input-group ">
+            <div class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <input type="Search" class="form-control outline-none"  placeholder="Search">
+          </div>
+        </div>
+      </span>
+      <div class="right d-none d-md-block">
+        <div class="navl d-flex align-items-center">
+          <di v class="login-sign h-100 d-flex  align-items-center justify-content-between ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-left icon" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+              <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+            </svg>
+            <p id="homeSign" class="m-0">login | SignUp </p>
+          </di>
+          
+            <div id="cart">
+              <div class="cart">0</div>
+              <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3 icon "  viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </nav>
+  <div class="navbars  d-block d-md-none pb-2 ">
+    <div class="container-fluid px-0 mt-4  ">
+          <div class="row d-flex">
+                <div class="col-md-10  col-sm-9 col-9 d-flex pe-0 ">
+                          <div class="nav-inputs">
+                            <div class="center">
+                              <div class="input-group px-0" style="height:40px">
+                                <div class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                <input type="Search" class="form-control outline-none"  placeholder="Search">
+                              </div>
+                            </div>
+                          </div>
+                                
+                  </div>
+                  <div class="col-md-2  col-sm-3 col-3 ps-3 d-flex justify-content-end align-items-center">
+                  <div class="nav-icon px-sm-2 px-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-left icon" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                      <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                    </svg>
+                  </di>
+                  </div>
+                  <div id="cart" class="ms-3 ">
+                    <div class="cart">0</div>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3 icon "  viewBox="0 0 16 16">
+                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </div>
+                    
+              </div>                            
+                        
+          </div>
+                              
+    </div>
+
+    </div>
+
+
+    <!-- navbar 3 -->
+            <div class="navbar3 d-none d-md-block">
+              <div class="container-fluid px-0 mx-0">
+                <div class="row px-0 text-white">
+                      <div class="col-xl-11 col-10  px-0 mx-0 py-2 d-flex align-items-center">
+                        <span class="m d-flex align-items-center"><i class="fa-solid fa-bars " style="font-size: 20px;"></i></span>
+                        <h5 class="mb-0 mx-2" style="font-weight: 600;">Category of Goods </h5> 
+                        | <p class="mb-0 mx-2 mt-1">%&nbsp;Offers and Discounts</p>
+                        <h4 class="d-flex align-items-center mb-0 "><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                          <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                        </svg>The Best-Sells</h4>
+                      </div>
+                      <div class="col-xl-1 col-2 pe-3  ps-0 md-1200px d-md-flex align-items-md-center">
+                        <div  class="navbar3-right d-flex align-items-center d-flex d-lg-center w-100">
+                          <h4 class="mb-0 mx-1  ">En&nbsp;</h4> 
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="17" height="17" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                        </svg>
+                        <svg id="lightModeBtn" xmlns="http://www.w3.org/2000/svg" class="ms-auto"  width="17" height="17" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                      
+                        <svg id="darkModeBtn" class="ms-auto d-none" xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                          <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                        </svg>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+</header>
+
+
+
+
+<!--========================== sumsung coding end ====================================-->
+
+<div id="sumsung" style="padding:10px 16px 0px 16px;">
+  <div class="container">
+    <div class="row">
+      <div class="col ">
+         
+         
+          <p class="bredcum" style="color: #b9c0c2;font-size:13px;">
+              <a href="../index.html" class="btn" style="color: #b9c0c2;font-size:13px;" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-houses" viewBox="0 0 16 16">
+                      <path d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708L5.793 1Zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708L8.793 2Zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207l-4.5-4.5Z"/>
+                    </svg>&nbsp;
+           Home
+          </a>
+              /&nbsp;
+              Products
+              /&nbsp;
+              Digital
+              /&nbsp;
+              Mobile And Accessories
+              /&nbsp;
+              Samsung
+              /&nbsp;
+              Samsung Galaxy A22 5g 64 Gb Grey</p>
+      </div>
+
+  </div>
+    <div class="row">
+        <div class="col">
+            <div class="newset overview">
+                <div class="row mt-3">
+                    <div class="col-lg-4 col-md-12  mb-xl-0 mb-5 ps-lg-5 d-flex d-felx flex-column">
+                        <div class="icons text-white d-flex flex-column mt-3 ">
+                            <svg class="hove-icon mb-4"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                              </svg>
+                              <svg class="d-none mb-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                              </svg>
+                              <svg  class="hove-icon mb-4"   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                              </svg> 
+                              <svg class="d-none mb-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                              </svg>
+                        </div>
+                        <div class="product-image mb-4 text-center mx-auto bg-danger" >
+                            <img style="background-color:#1E293B;" src=""  alt="" class="img-fluid " width="400px">
+                           
+                        </div>
+                        
+                        
+                        <div class="product-images px-3  mx-lg-0  mx-auto" >
+                            
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-12  px-xl-0  px-0 mx-0 ">
+                        <div class="product-inforamtion text-white ">
+                            <p style="font-size: 15px;margin-bottom: 0px;">SAMSUNG Galaxy A22 5G – 64 GB, Grey</p>
+                            <hr class="mt-2">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6 ">
+                                    <div class="newest-star justify-content-start d-flex mb-3">
+                                        <div class="yellow-satr">
+                                          <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                          <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                          <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                          <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                          <i class="fa-solid fa-star" style="color: rgb(68, 65, 65);font-size: 10px;" ></i>
+                                          <span style="font-size: 11px;">( 4Star )</span>
+                                        </div>
+                                        </div>
+                                        <h3 style="font-size: 14px; color: white;">Product Details</h3>
+                                        <p style="font-size: 14px;" class="lead col-8">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae animi aperiam officiis consequatur ipsam vero expedita eveniet aliquid soluta ducimus facilis, beatae id minima unde earum consectetur numquam sint quisquam fugit, eos eum quae dolorum error? Rem explicabo, enim, 
+                                        </p>
+              
+                                </div>
+                                <div class="col-lg-4 col-sm-5 ms-auto col-12    my-1 py-1">
+                                    <div class="counter p-3" style="border: 1px solid #686d6f70;">
+                                        <h3 style="font-size: 14px; color: white;">Product Details</h3>
+                                    <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 15px;">
+                                        <sup>Rs</sup>
+                                        <del>60,000</del>
+                                      </div>
+                                      <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 17px;">
+                                        <sup>Rs</sup>
+                                        <ind>58,000</ind>
+                                        <sub style="color: #bbf7d0;">(-%2)</s>
+                                      </div>
+                                      <div class="conunter-div mt-4 d-flex justify-content-center align-items-center">
+                                        <span style="color: white; font-size: 20px;">+</span> <span class="mx-3" style="border: 1px solid #686d6f70;padding:2px 15px;background-color: #3B3B3B;">1</span>
+                                        <span style="color: white; font-size: 20px;">-</span>
+                                      </div>
+                                      <button id="addCart" class="btn mt-4 text-white ms-5 d-felx justify-content-center align-items-center"
+                                      style="font-size: 16px;background: #A71B4A;">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                              <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                            </svg>
+                                            Add To cart
+                                      </button>
+                                    </div>
+              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<!--================================== testimonial coding start =========================-->
+<div id="testimonial" class="pt-5 pb-1" style="padding:0px 16px;margin-top: 5px;">
+    <div class="container px-0  ">
+          <div class="row text-white gx-0 px-lg-5 px-0  pt-4" style="border: 1px solid #686d6f67;">
+              <div class="col-6 col-md-3 mt-sm-0 my-3 d-flex justify-content-center">
+                <div class="testimonal-content ">
+                  <img src="images/testimonail.png" alt="" width="53px" class="img-fluid
+                  ">
+                  <p class=" mt-2" style="font-size: 18px;">express delivery</p>
+                </div>
+              </div>
+              
+              <div class="col-6 col-md-3 my-sm-0 my-3 d-flex justify-content-center">
+                <div class="testimonal-content ">
+                  <img src="images/testimonail2.png" alt="" width="50px" class="img-fluid
+                  ">
+                  <p class="mt-2" style="font-size: 18px;">payment on the spot</p>
+                </div>
+              </div>
+              
+              <div class="col-6 col-md-3 my-sm-0 my-3 d-flex justify-content-center">
+                <div class="testimonal-content ">
+                  <img src="images/testimonail3.png" alt="" width="50px" class="img-fluid
+                  ">
+                  <p class=" mt-2" style="font-size: 18px;">24/7 support</p>
+                </div>
+              </div>
+              
+              <div class="col-6 col-md-3 my-sm-0 my-3 d-flex justify-content-center">
+                <div class="testimonal-content ">
+                  <img src="images/testimonail4.png" alt="" width="50px" class="img-fluid
+                  ">
+                  <p class=" mt-2" style="font-size: 18px;">Guarantee the originality</p>
+                </div>
+              </div>
+              
+            
+          </div>
+    </div>
+</div>
+ 
+<!--================================== footer coding start =========================-->
+<div id="product-interested" style="padding: 20px 16px 0px 16px;">
+    <div class="container">
+        <div class="row">
+            <div class="col text-white">
+                <h3 style="font-size: 20px;font-weight: 600;">
+                    You May Be Interested In
+                </h3>
+                <div class="icon d-flex justify-content-between mt-5" style="padding: 20px;">
+                    <svg  style="background-color: #1E293B;border-radius:10px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                        <path  fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                      </svg>
+
+                      <svg style="background-color: #1E293B;border-radius:10px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                      </svg>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================================== footer coding start =========================-->
+
+
+<footer id="footer">
+      <div class="container-fluid px-0">
+        <hr>
+          <div class="container pt-3 ">
+            <div class="row px-lg-5 px-0">
+                  <div class="col-xl-3 col-lg-4 col-sm-6  ">
+                    <div class="footer-content">
+                      <h3>Shope Online Map</h3>
+                      <ul>
+                      <li>       <a href="btn">AboutsUs</a>
+                      </li>
+                      <li><a href="btn">ContentUS</a></li>
+                      <li> <a href="btn">Sale In OnlineShop</a></li>
+                      <li>
+                        <a href="btn">Career Opportunies</a>
+                      </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-sm-6 ">
+                    <div class="footer-content">
+                      <h3>customer Services</h3>
+                      <ul>
+                      <li>       <a href="btn">common Questions</a>
+                      </li>
+                      <li><a href="btn">return Procedures</a></li>
+                      <li> <a href="btn">privacy</a></li>                      
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-4 col-sm-6 px-0">
+                    <div class="footer-content">
+                      <h3>shopping Guide</h3>
+                      <ul>
+                      <li>       <a href="btn">how To Place An Order</a>
+                      </li>
+                      <li><a href="btn">order Submission Procedure</a></li>
+                      <li> <a href="btn">payment Methods</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 col-md-7 pt-3 col-11 pt-0">
+                    <div class="footer-content">
+                      <h4 style="color: #e2e8f0e6;">Be With Us!</h4>
+                      <ul class="d-flex">
+                        <li><a href=""><i class="fa-brands  fa-instagram icon"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin icon"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-twitter icon"></i></a></li>
+                        <li><a href=""><i class="fa-regular fa-paper-plane icon"></i></a></li>
+                      </ul>
+                      <h2 style="font-size: 16px;color: #e2e8f0e6;" class=" mt-5 ">Stay up to date with the latest discounts by emailing us</h2>
+                      <div class="input-group px-0 mt-3 ">
+                        <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">Register</span>
+                      </div>      
+                   
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+</footer>
+
+
+
+
+<!--======================== subfooter coding start ================================-->
+
+<div id="subfooter" style="padding: 0px 16px;">
+  <div class="container-fluid  me-0">
+    <hr>
+    <div class="lfooter">
+      <p class="text-center mt-3 ">
+        © 2023 OnlineShop.All rights reserved - Designed and Developed By
+        <a href="https://www.jahanzaibtayyab.com/" >Jahanzaib Tayyab</a>
+      </p>
+    </div>
+</div>
+</div>
+
+
+
+    <!--======================== bootstrap javascript coding end ===================-->
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <scrip src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+
+  let overview = document.querySelector(".overview");
+ let over_img = overview.querySelector("img")
+ let over_imags = overview.querySelectorAll(".product-images")[0]
+let getitem =JSON.parse(localStorage.getItem("Product"))
+over_img.setAttribute("src",getitem[0].img)
+getitem[0].img_url.forEach(function(src,index) {
+  
+ if(index==0){
+  over_imags.innerHTML+=`
+<img src="${src}" class="img-fluid active mx-1" width="80px" height="auto"   alt="" >
+`
+}else if(index>0){
+   over_imags.innerHTML+=`
+ <img src="${src}" width="80px" class="img-fluid mx-1" height="auto" alt="" >
+ `
+  
+}
+});
+
+
+let icons = document.querySelectorAll(".icons svg");
+
+icons[0].addEventListener("click", function () {
+  icons[0].classList.add("d-none");
+  icons[1].classList.remove("d-none");
+  icons[1].style.color = "#e31b23";
+});
+icons[1].addEventListener("click", function () {
+  icons[1].classList.add("d-none");
+  icons[0].classList.remove("d-none");
+});
+icons[2].addEventListener("click", function () {
+  icons[2].classList.add("d-none");
+  icons[3].classList.remove("d-none");
+  icons[3].style.color = "#e31b23";
+});
+icons[3].addEventListener("click", function () {
+  icons[3].classList.add("d-none");
+  icons[2].classList.remove("d-none");
+});
+
+    </script>
+<script src="../main.js"></script>
+<!--==================== my javascript coding end ============================-->
+</body>
+</html>

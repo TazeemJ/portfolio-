@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1dc9cb;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 1st hamburger */
+        /* #hamburger{
+            width: 30px; 
+            height: 3px;
+            border-radius: 2px;
+            background-color: white;
+            position: relative;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.244);
+            transition: 1s;
+        }
+        #hamburger::before{
+            content: "";
+            width: 30px; 
+            height: 3px;
+            border-radius: 2px;
+            background-color: white;
+            position: absolute;
+            display: block;
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.244);
+            transition: 1s;
+        }
+        #hamburger::after{
+            content: "";
+            transition: 1s;
+            width: 30px; 
+            height: 3px;
+            border-radius: 2px;
+            background-color: white;
+            position: absolute;
+            display: block;
+            transform: translateY(10px);
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.244);
+        }
+        #hamburger.active{
+            box-shadow: none;
+            background: none;
+        }
+        #hamburger.active::after{
+            box-shadow: none;
+            background-color: yellow;
+            transform: rotate(-45deg);
+        }
+        #hamburger.active::before{
+            box-shadow: none;
+            transform: rotate(45deg);
+            background-color: yellow;
+        } */
+
+
+
+
+        /* 2nd hamburger */
+        /* #hamburger{
+            height: 50px;
+            width: 50px;
+            background: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            transition: 1s;
+        }
+        #hamburger.active{
+            background: rgba(128, 128, 128, 0.381);
+        }
+        #hamburger::before{
+            content: "";
+            width: 40px;
+            height: 3px;
+            display: block;
+            position: absolute;
+            transform: translateY(-12px);
+            background-color: black;
+            box-shadow: 0px 12px 0px black;
+            transition: 1s;
+        }
+        #hamburger::after{
+            content: "";
+            width: 40px;
+            height: 3px;
+            display: block;
+            position: absolute;
+            transform: translateY(12px);
+            background-color: black;
+            transition: 1s;
+        }
+        #hamburger.active::before{
+            box-shadow: 0px 0px 0px black;
+            transform: rotate(45deg);
+            
+        }
+        #hamburger.active::after{
+            transform: rotate(-45deg);
+        } */
+
+
+
+   /* 3rd hamburger */
+   #hamburger{
+			position: relative;
+			width:50px;
+			height:50px;
+			background-color: none;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transition: 0.5s;
+		}
+		#hamburger.active{
+			background-color: rgb(41, 119, 19);
+		 }
+			 #hamburger::before{
+				content: '';
+				position: absolute;
+				width:28px;
+				height:2px;
+				background: #fff; 
+				transition: 0.5s;
+				transform:translateY(-10px);
+				box-shadow: 0 10px 0 #fff; 
+			}
+			#hamburger::after{
+				content: '';
+				position: absolute;
+				width:28px;
+				height:2px;
+				background: #fff; 
+				transition: 0.5s;
+				box-shadow: 0 10 0 #fff;
+				transform:translateY(10px); 
+			}
+			#hamburger.active::before{
+				transform:translateY(0px);
+				box-shadow: 0 0 0 #fff;
+				rotate:45deg;
+			}
+			#hamburger.active::after{
+				transform:translateY(0px);
+				rotate:-45deg;
+			} 
+
+
+
+    </style>
+</head>
+
+<body>
+    <div id="hamburger">
+
+    </div>
+
+
+    <script>
+        let toggle = document.getElementById("hamburger");
+        toggle.addEventListener("click",function(){
+            toggle.classList.toggle("active");
+        })
+        
+    </script>
+</body>
+
+</html>

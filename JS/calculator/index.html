@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      .div{
+        width: 350px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 30px;
+        box-shadow: inset 5px 5px 12px white, 5px 5px 12px rgba(0, 0, 0, 0.16);
+      }
+      input {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        outline: none;
+        border-radius: 50px;
+        background-color: #ecf0f3;
+        padding: 20px;
+        border: white;
+        box-shadow: inset -5px -5px 12px white, 5px 5px 12px rgba(0, 0, 0, 0.16);
+        text-align: right;
+        color: rgb(70, 70, 70);
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .row {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .button {
+        border: none;
+        border-radius: 50%;
+        height: 54px;
+        width: 54px;
+        font-size: 18px;
+        background-color: #ecf0f0;
+        box-shadow: inset -5px -5px 12px white, 5px 5px 12px rgba(0, 0, 0, 0.16);
+        margin: 8px;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <input type="text" name="" id="" placeholder="0"/>
+      <div class="row">
+        <button class="button">AC</button>
+        <button class="button">DEL</button>
+        <button class="button">/</button>
+        <button class="button">+</button>
+      </div>
+      <div class="row">
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+        <button class="button">*</button>
+      </div>
+      <div class="row">
+        <button class="button">3</button>
+        <button class="button">2</button>
+        <button class="button">1</button>
+        <button class="button">-</button>
+      </div>
+      <div class="row">
+        <button class="button">0</button>
+        <button class="button">.</button>
+        <button class="button">00</button>
+        <button class="button">=</button>
+      </div>
+    </div>
+    <script>
+      var string = "";
+      let buttons = document.querySelectorAll(".button");
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function (e) {
+          if (e.target.innerHTML == "=") {
+            string = eval(string);
+            document.getElementsByTagName("input")[0].value = string;
+          } else if (e.target.innerHTML == "AC") {
+            string=""
+            document.getElementsByTagName("input")[0].value = string
+          }else if(e.target.innerHTML=="DEL"){
+            string=string.slice(0,-1)
+            document.getElementsByTagName("input")[0].value = string           
+          }else {
+            string += e.target.innerHTML;
+            document.getElementsByTagName("input")[0].value = string;
+          }
+          
+        });
+      }
+    </script>
+  </body>
+</html>

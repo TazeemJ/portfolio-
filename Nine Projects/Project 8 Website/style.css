@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+ 
+}
+body{
+    display: flex;
+}
+.header-section{
+    list-style-type: none;
+    border: 1px solid rgba(0, 0, 0, 0.253); 
+    max-width: 225px;  
+    height: 100vh;
+}
+.header-section h2{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+    font-size:25px;
+    padding: 10px;
+    line-height: 1.5;
+    font-weight: 1000;
+}
+.header-section  li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+}
+.header-section  li:hover {
+    background-color: rgba(0, 0, 0, 0.123);
+}
+.header-section  li a{
+    
+    font-weight: 300;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+/* aside section */
+.aside-section{
+    padding: 50px;
+   
+}
+.contanier{
+    max-width: 1100px;
+}
+.aside-items{
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.aside-items h2{
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+     font-weight: 800;
+}
+.aside-items p{
+    line-height: 2;
+    font-size: 14px;
+}
+.aside-items ul{
+    padding-left:45px ;
+}
+.aside-items li{
+    font-size: 14px;
+    line-height: 2;
+
+}
+.aside-items code{
+    font-family: monospace;
+    padding: 20px;
+    margin: 0px 5px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+}

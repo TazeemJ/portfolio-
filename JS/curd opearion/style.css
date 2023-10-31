@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    width: 100%;
+    padding: 10px 30px;
+    background: #EE534F;
+}
+
+.header h2 {
+    font-size: 25px;
+    color: white;
+}
+
+.upper-btn-box {
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+    display: flex;
+}
+
+.upper-btn-box .btn-left-box {
+    width: 50%;
+    height: 100%;
+}
+
+.upper-btn-box .btn-right-box {
+    width: 50%;
+    height: 100%;
+}
+
+.upper-btn-box .btn-left-box button,
+.upper-btn-box .btn-right-box button {
+    padding: 10px 25px;
+    background-color: #4286F5;
+    color: white;
+    border: none;
+    font-size: 17px;
+    margin: 0px 10px;
+    outline: none;
+
+}
+
+.upper-btn-box .btn-right-box i {
+    font-size: 18px;
+    color: #4286F5;
+}
+
+
+.upper-btn-box .btn-right-box input {
+    padding: 10px;
+    width: 70%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #4286F5;
+
+}
+
+.upper-btn-box .btn-right-box button {
+    background-color: #EE534F;
+    border-radius: 10px;
+}
+
+.table-box {
+    width: 100%;
+    padding: 30px;
+}
+
+.table-box table {
+    width: 100%;
+
+    /* border-top: none;
+    border-left: none;
+    border-right: none; */
+}
+
+.table-box table tr th {
+    border-right: 1px solid #ccc;
+    padding-top: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-box table tr td {
+    border-right: 1px solid #ccc;
+    padding-top: 5px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-box table tr td button {
+    width: 40%;
+    background-color: #4286F5;
+    color: white;
+    border: none;
+    font-size: 17px;
+    margin: 0px 5px;
+    outline: none;
+    padding: 5px;
+}
+
+.model {
+    width: 0%;
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    display: flex;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    border-top: 20px groove #4286F5;
+    transition: 0.3s ease-in-out;
+}
+.model.active{
+    opacity: 1;
+    z-index: 1;
+    width: 60%;
+}
+.model #hamburger{
+    position: absolute;
+    right: -20px;
+    cursor: pointer;
+    top: -40px;
+    color: #EE534F;
+    font-size: 30px;
+    padding: 10px;
+
+}
+
+.model .left-model {
+    width: 30%;
+    height: 100%;
+    height: 300px;
+    display: flex;
+}
+
+.model .left-model .img-box {
+    display: flex;
+    padding: 50px;
+    flex-direction: row;
+    width: 100%;
+    position: 1;
+}
+
+.model .left-model .img-box input {
+    position: absolute;
+    top: 5%;
+    width: 120px;
+    opacity: 0;
+    height: 180px;
+    cursor: pointer;
+}
+
+.model .left-model .img-box img {
+    border-radius: 10px;
+}
+
+.model .right-model {
+    width: 70%;
+    height: 100%;
+    border-left: 5px groove #4286F5;
+    padding: 30px;
+}
+.model .right-model .input-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.model .right-model .input-box label{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 20px 0px;
+}
+.model .right-model .input-box input{
+    width: 70%;
+    margin: 10px 0px;
+    border: none;
+    padding: 13px;
+    outline: none;
+    border-bottom: 3px solid #4286F5;
+    background: transparent;
+}
+.model .right-model .input-box button{
+    width: 50%;
+    padding: 10px 25px;
+    background-color: #4286F5;
+    color: white;
+    border: none;
+    font-size: 17px;
+    margin: 10px 5px 0px 0px;
+    outline: none;
+}
+.model .right-model .input-box button:disabled{
+    filter: grayscale(80%);
+}
+
+
+
+
+
+
+/* hamburger  */
+#hamburger{
+    position: relative;
+    width:40px;
+    height:40px;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+#hamburger{
+    background-color: red;
+    border-radius: 50%;
+ }
+     #hamburger::before{
+        content: '';
+        position: absolute;
+        width:28px;
+        height:2px;
+        background: repeating-radial-gradient(); 
+        transition: 0.5s;
+        rotate:-45deg;
+        background: white; 
+    }
+    #hamburger::after{
+        content: '';
+        position: absolute;
+        width:28px;
+        height:2px;
+        background: white; 
+        transition: 0.5s;
+        box-shadow: 0 10 0 #fff;
+        transform:translateY(10px);
+        transform:translateY(0px);
+        rotate:45deg; 
+    }
+   
+

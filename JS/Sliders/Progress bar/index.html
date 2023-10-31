@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: rgb(18, 113, 186);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        margin: 0 auto;
+        width: 1000px;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .progressbar {
+        margin-top: 30px;
+        width: 400px;
+        height: 30px;
+        background-color: rgb(255, 255, 255);
+      }
+      .tprogressbar,.b2,.p3n {
+        width: 0px;
+        height: 30px;
+        background-color: rgb(26, 179, 230);
+        /* background: linear-gradient(
+          rgb(232, 227, 227),
+          rgb(218, 151, 151),
+          rgb(205, 98, 114),
+          rgb(202, 70, 90),
+          rgb(190, 60, 80),
+          rgb(169, 25, 47)
+        ); */
+        text-align: center;
+        display: inline-block;
+        color: transparent;
+        transition: ease-in-out 0.9s;
+      }   
+      p,.p2p {
+        margin-top: 10px;
+        font-size: 30px;
+        opacity: 0;
+        color: white;
+      }
+      .value,.p2,.p3 {
+        font-size: 80px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+     <div class="progress">
+      <div class="value"></div>
+      <div class="progressbar">
+        <span class="tprogressbar">
+       40
+        </span>
+      </div>
+      <p>Insert number between 0 to 100</p>
+      <div class="p2"></div>
+      <div class="progressbar">
+        <span class="b2">
+        20
+        </span>
+    </div>
+    <p class="p2p">Insert number between 0 to 100</p>
+     </div>
+     <div class="progress">
+      <span class="p3n">522</span>
+     <div class="p3">20</d>
+     </div>
+</div>
+</div>
+<script>  
+          let b2 = document.getElementsByClassName("b2")[0];
+          let p2 = document.getElementsByClassName("p2")[0];
+          let b= 0;
+          let p3 = document.getElementsByClassName("p3")[0];
+          let p3n = document.getElementsByClassName("p3n")[0];
+          let c=0;
+          let tprogressbar = document.getElementsByClassName("tprogressbar")[0];
+          let value = document.getElementsByClassName("value")[0];
+          let a = 0;
+          if (parseInt(tprogressbar.innerHTML) > 100) {
+              document.getElementsByTagName("p")[0].style.opacity = "1";
+              document.getElementsByClassName(
+                  "progressbar"
+                  )[0].style.opacity = `0.1`;
+              } else {
+                  let stop = setInterval(function () {
+                      value.innerHTML = 0 + a;
+                      a += 1;
+                    
+                      if (value.innerHTML == parseInt(tprogressbar.innerHTML) || tprogressbar.innerHTML.trim() ==="") {
+                      clearInterval(stop);
+                      }
+                     
+                    }, 40);
+
+console.log(p3n.innerHTML)
+
+
+                    let stops3 = setInterval(function () {
+                      p3.innerHTML =parseInt(p3.innerHTML) + c +"+";
+                      c=1
+                      if (p3.innerHTML == parseInt(p3n.innerHTML)+"+" || p3n.innerHTML.trim() ==="" ) {
+                      clearInterval(stops3);
+                    }                
+                     
+                    }, 0);
+
+                    //  dec bar  
+
+      value.innerHTML = 0;
+          p2.innerHTML = 0;    
+          let stops = setInterval(function () {
+              p2.innerHTML = 0 + b;
+              b+= 1;
+              if (p2.innerHTML == parseInt(b2.innerHTML) ||  b2.innerHTML.trim() ==="" ) {
+                  clearInterval(stops);
+                }
+          }, 40);
+        
+          window.onload = function () {
+            if (parseInt(b2.innerHTML) > 100) {
+              document.getElementsByTagName("p")[0].style.opacity = "1";
+              document.getElementsByClassName(
+                "b2"
+              )[0].style.opacity = `0.1`;
+            } else {
+              b2.style.width = `${parseInt(b2.innerHTML)}%`;
+            }   
+            
+            if(tprogressbar.innerHTML.trim()>="1" && tprogressbar.innerHTML.trim()<="10"){
+                      tprogressbar.style.width = `${parseInt(tprogressbar.innerHTML)}%`;         
+                      tprogressbar.style.backgroundColor = "gray";
+                      }
+                      else if(tprogressbar.innerHTML.trim()>="11" && tprogressbar.innerHTML.trim()<="36" ){
+                      tprogressbar.style.width = `${parseInt(tprogressbar.innerHTML)}%`;
+                      
+                      tprogressbar.style.backgroundColor = "green";
+                      tprogressbar.style.width = `${parseInt(tprogressbar.innerHTML)}%`;
+                      }
+                      else if(tprogressbar.innerHTML.trim()>="37" && tprogressbar.innerHTML.trim()<="45" ){
+                      
+                      tprogressbar.style.width = `${parseInt(tprogressbar.innerHTML)}%`;
+                      tprogressbar.style.backgroundColor = "rgb(246, 197, 107)";
+                      }
+                      else if(tprogressbar.innerHTML.trim()>="46" && tprogressbar.innerHTML.trim()<="65" ){
+                      tprogressbar.style.width = `${parseInt(tprogressbar.innerHTML)}%`;
+                      
+                      tprogressbar.style.backgroundColor = " yellow";
+                      tprogressbar.style.width = `${parseInt(tprogressbar.innerHTML)}%`;
+                    }
+                    else if(tprogressbar.innerHTML.trim()>="66" && tprogressbar.innerHTML.trim()<="80" ){
+                        tprogressbar.style.backgroundColor = "  orange";
+                        tprogressbar.style.width = `${parseInt(tprogressbar.innerHTML)}%`;
+                        
+                    }
+                    else{
+                        tprogressbar.style.backgroundColor="red"
+                        tprogressbar.style.width = `${parseInt(tprogressbar.innerHTML)}%`;
+                    }   
+                    };
+                }
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- page title -->
+
+    <title>Shope Online</title>
+
+    <!-- bootstrap link -->
+ 
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- font link -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+
+
+
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <style>
+    #form .forms input{
+        width: 100%;
+        height: 30px;
+        margin:0px 0px 10px;
+        background-color: #1E293B;
+        border: none;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+        color: white;
+        font-size:12px ;
+        
+        /* box-shadow: -3px 6px 7px -3px black;    */
+      }
+      #form .forms input::placeholder{
+        font-size: 10px;
+        color: #7b7a7ac0;
+        
+        /* box-shadow: -3px 6px 7px -3px black;    */
+      }
+      
+      #form{
+        position: relative;
+        
+      }   
+    #alert{
+      position: absolute;
+      right: 2%;
+      top: 20%;
+      transform: translateY(-120%);
+      transition: 0.3s ease-out;
+      
+    }
+    #alert.active{
+      transform: translateY(0%);
+      
+    }
+  </style>
+  
+  <body>
+
+    <!-- <div id="alert">
+      Login
+    </div> -->
+    <!--*========================== NavBar coding start =================================-->
+    
+    
+    <header id="header" >
+      <div class="col-2" id="cartDiv" style="background-color: rgb(15, 23, 42) ;">
+      <div class="row py-0 px-2">
+      <div class="col-6 py-2">
+        <span style="font-size: 10px;color: white;" id="chartCounter">0 <span>Product</span></span>
+      </div>
+      <div class="col-6 text-end">
+        <a href="" class="btn py-2 px-1" style="color: #0d4c76; font-size: 12px;padding: 20px;">See all</a>
+      </div>
+      <div id="cartText" class="text-center" style="color: #686d6f;">cart is empty</div>
+      </div>
+      </div>
+  <nav class="navbar navbar-expand-md " id="nav">
+    <div class="container-fluid p-0 m-0">
+      <span class="d-block d-md-none px-3 py-1"><i class="fa-solid fa-bars icon"></i></span>
+      <a class="navbar-brand " href="index.html"><img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2FlogoShop.png&w=128&q=75" alt=""></a>
+      <button class="navbar-toggler left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="menu-icon icon "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+              <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+              <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+            </svg></div>
+      </button>
+      <span class="collapse navbar-collapse " id="navbayrNav">
+        <div class="center w-100 d-none d-md-block" style="height: 51px;">
+          <div class="input-group ">
+            <div class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <input type="Search" class="form-control outline-none"  placeholder="Search">
+          </div>
+        </div>
+      </span>
+      <div class="right d-none d-md-block">
+        <div class="navl d-flex align-items-center">
+          <di v class="login-sign h-100 d-flex  align-items-center justify-content-between ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-left icon" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+              <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+            </svg>
+            <p id="homeSign" class="m-0">login | SignUp </p>
+          </di>
+          
+            <div id="cart">
+              <div class="cart">0</div>
+              <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3 icon "  viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </nav>
+  <div class="navbars  d-block d-md-none pb-2 ">
+    <div class="container-fluid px-0 mt-4  ">
+          <div class="row d-flex">
+                <div class="col-md-10  col-sm-9 col-9 d-flex pe-0 ">
+                          <div class="nav-inputs">
+                            <div class="center">
+                              <div class="input-group px-0" style="height:40px">
+                                <div class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                <input type="Search" class="form-control outline-none"  placeholder="Search">
+                              </div>
+                            </div>
+                          </div>
+                                
+                  </div>
+                  <div class="col-md-2  col-sm-3 col-3 ps-3 d-flex justify-content-end align-items-center">
+                  <div class="nav-icon px-sm-2 px-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-left icon" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                      <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                    </svg>
+                  </di>
+                  </div>
+                  <div id="cart" class="ms-3 ">
+                    <div class="cart">0</div>
+                    <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3 icon "  viewBox="0 0 16 16">
+                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </div>
+                    
+              </div>                            
+                        
+          </div>
+                              
+    </div>
+
+    </div>
+
+
+    <!-- navbar 3 -->
+            <div class="navbar3 d-none d-md-block">
+              <div class="container-fluid px-0 mx-0">
+                <div class="row px-0 text-white">
+                      <div class="col-xl-11 col-10  px-0 mx-0 py-2 d-flex align-items-center">
+                        <span class="m d-flex align-items-center"><i class="fa-solid fa-bars " style="font-size: 20px;"></i></span>
+                        <h5 class="mb-0 mx-2" style="font-weight: 600;">Category of Goods </h5> 
+                        | <p class="mb-0 mx-2 mt-1">%&nbsp;Offers and Discounts</p>
+                        <h4 class="d-flex align-items-center mb-0 "><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                          <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                        </svg>The Best-Sells</h4>
+                      </div>
+                      <div class="col-xl-1 col-2 pe-3  ps-0 md-1200px d-md-flex align-items-md-center">
+                        <div  class="navbar3-right d-flex align-items-center d-flex d-lg-center w-100">
+                          <h4 class="mb-0 mx-1  ">En&nbsp;</h4> 
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="17" height="17" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                        </svg>
+                        <svg id="lightModeBtn" xmlns="http://www.w3.org/2000/svg" class="ms-auto d-none"  width="17" height="17" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                      
+                        <svg id="darkModeBtn" class="ms-auto d-none" xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                          <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                        </svg>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+</header>
+
+
+
+
+<!--========================== login coding end ====================================-->
+
+<div id="form" style="margin-top:20px;padding: 20px 16px 0px 16px;">
+    <div class="container">
+        <div class="row">
+            <div class="col px-sm-4 px-2 ">
+                <div class="forms col-xl-4 col-lg-6 col-md-8 col-sm-12 px-5 mx-auto text-white py-4" style="background-color: #1E293B;border-radius:8px ;">
+                    <form class="row g-3">
+                        <div class="col-12">
+                            <h2 id="login" style="font-size: 18px;font-weight: 800;" class="mb-0">Login</h2>
+                        </div>
+                        <div class="col-12">
+                            <p style="font-size: 13px;" class="mb-1">Hi!</p>
+                            <span class="login-text " style="font-size: 10px;line-height: 1.9; " id="login-text">
+                                <p style="background-color: #0F172A;" class="p-1"> 
+                                  Besides registering, you can also test the template with test account information(email: test@shope.com - Password: 123456)
+                                </p>
+                            </span>
+                        </div>
+                        <div class="col-md-12 d-none">
+                          <label for="Name" class="form-label" style="font-size: 12px;"><span style="color: red;">*</span>&nbsp;User Name</label>
+                          <input type="text" class="form-control" id="Name" placeholder="Please Enter Your Email">
+                          <span></span>
+                        </div>
+                        <div class="col-md-12">
+                          <label for="inputEmail4" class="form-label" style="font-size: 12px;"><span style="color: red;">*</span>&nbsp;Email</label>
+                          <input type="email" class="form-control mb-0" id="inputEmail4" required placeholder="Please Enter Your Email">
+                          <span class="invalidem mt-0 d-none" style="font-size: 10px;color: red;">Invalid Email</span>
+                        </div>
+                        
+                        <div class="col-12">
+                          <label for="password" class="form-label"  style="font-size: 12px;"><span style="color: red;">*</span>&nbsp;Password</label>
+                          <input type="password" class="form-control mb-0" id="password" required placeholder="Please Enter Your Password">
+                          <span class="invalidpas mt-0 d-none" style="font-size: 10px;color: red;">Password Must Be At Least 6 Characters</span>
+                        </div>
+                        
+                            <button id="LogSin" class="btn py-2 mx-1" style="color:#fee7e7 ;background-color: #a71b4a;">Login</button>
+                       
+                      
+
+                      </form>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center mt-3 ">
+          <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 px-5 px-3 d-flex justify-content-center">
+            <p class="py-1 m-0" style="color: #ac9aaf;font-size: 13px;">Don't You Have An Account?</p>&nbsp;
+            <button href="" id="signUp" class="btn p-0 m-0" style="color: #06b6d4;font-size: 13px;">Sign Up</button>
+
+          </div>
+        </div>
+    </div>
+</div>
+
+
+ 
+
+<!--================================== footer coding start =========================-->
+
+
+<footer id="footer">
+      <div class="container-fluid px-0">
+        <hr>
+          <div class="container pt-3 ">
+            <div class="row px-lg-5 px-0">
+                  <div class="col-xl-3 col-lg-4 col-sm-6  ">
+                    <div class="footer-content">
+                      <h3>Shope Online Map</h3>
+                      <ul>
+                      <li>       <a href="btn">AboutsUs</a>
+                      </li>
+                      <li><a href="btn">ContentUS</a></li>
+                      <li> <a href="btn">Sale In OnlineShop</a></li>
+                      <li>
+                        <a href="btn">Career Opportunies</a>
+                      </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-sm-6 ">
+                    <div class="footer-content">
+                      <h3>customer Services</h3>
+                      <ul>
+                      <li>       <a href="btn">common Questions</a>
+                      </li>
+                      <li><a href="btn">return Procedures</a></li>
+                      <li> <a href="btn">privacy</a></li>                      
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-4 col-sm-6 px-0">
+                    <div class="footer-content">
+                      <h3>shopping Guide</h3>
+                      <ul>
+                      <li>       <a href="btn">how To Place An Order</a>
+                      </li>
+                      <li><a href="btn">order Submission Procedure</a></li>
+                      <li> <a href="btn">payment Methods</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 col-md-7 pt-3 col-11 pt-0">
+                    <div class="footer-content">
+                      <h4 style="color: #e2e8f0e6;">Be With Us!</h4>
+                      <ul class="d-flex">
+                        <li><a href=""><i class="fa-brands  fa-instagram icon"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin icon"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-twitter icon"></i></a></li>
+                        <li><a href=""><i class="fa-regular fa-paper-plane icon"></i></a></li>
+                      </ul>
+                      <h2 style="font-size: 16px;color: #e2e8f0e6;" class=" mt-5 ">Stay up to date with the latest discounts by emailing us</h2>
+                      <div class="input-group px-0 mt-3 ">
+                        <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Amount (to the nearest dollar)">
+                        <span class="input-group-text">Register</span>
+                      </div>      
+                   
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+</footer>
+
+
+
+
+<!--======================== subfooter coding start ================================-->
+
+<div id="subfooter" style="padding: 0px 16px;">
+  <div class="container-fluid  me-0">
+    <hr>
+    <div class="lfooter">
+      <p class="text-center mt-3 ">
+        © 2023 OnlineShop.All rights reserved - Designed and Developed By
+        <a href="https://www.jahanzaibtayyab.com/" >Jahanzaib Tayyab</a>
+      </p>
+    </div>
+</div>
+</div>
+
+
+
+<div id="alert" class=" col-2" style="background-color: white;color: black;">
+  <div class="col-8 mx-auto text-center py-2">
+    <p class="p-0 mb-0" style="font-size: 20px;">Login In   <svg style="background-color: rgb(89, 179, 89);" class="text-white " xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </svg></p>
+  </div>
+</div>
+    <!--======================== bootstrap javascript coding end ===================-->
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+
+    <!--==================== my javascript coding end ============================-->
+<script>
+let forms=document.getElementById("form")
+let LoginSign=document.getElementById("LogSin")
+let inputName=document.getElementById("Name")
+let inputEmail=document.getElementById("inputEmail4")
+let inputPassw=document.getElementById("password")
+
+
+
+
+let LSn=document.getElementById("signUp")
+let testText=document.getElementById("login-text")
+LSn.addEventListener("click",function(){
+  if(LSn.innerHTML=="Sign Up"){
+    forms.getElementsByTagName("h2")[0].innerHTML="Sign Up"
+    LoginSign.innerHTML="Sign Up"
+    inputName.parentElement.classList.remove("d-none")
+    testText.classList.add("d-none")
+    LSn.previousElementSibling.innerHTML=`Alreasdy You Have An Account?`
+    LSn.innerHTML="Login"
+    
+    
+    
+  }else if(LSn.innerHTML=="Login"){
+    forms.getElementsByTagName("h2")[0].innerHTML="Login"
+
+    inputName.parentElement.classList.add("d-none")
+    testText.classList.remove("d-none")
+    LSn.previousElementSibling.innerHTML=`Don't You Have An Account? `
+    LSn.innerHTML="Sign Up"
+    LoginSign.innerHTML="Login"
+    
+
+     }
+})
+
+
+let invalidpas =document.querySelector(".invalidpas")
+inputPassw.addEventListener("input",function(){
+})
+
+inputPassw.addEventListener("focusout",function(){
+
+  if(inputPassw.value.length<1){
+    invalidpas.classList.remove("d-none")
+    invalidpas.innerHTML="Requird"
+  } 
+  
+  else if(inputPassw.value.length>0 && inputPassw.value.length<6) {
+    
+        invalidpas.classList.remove("d-none")
+        invalidpas.innerHTML="Password Must Be At Least 6 Characters"
+        inputPassw.addEventListener("input",function(){
+          if(inputPassw.value.length>=6){
+            invalidpas.classList.add("d-none")
+            
+          }else{
+              
+            invalidpas.classList.remove("d-none")
+            invalidpas.innerHTML="Password Must Be At Least 6 Characters"
+  }
+          },false)
+   
+  }
+  else{
+    invalidpas.classList.add("d-none")
+  } 
+})
+
+let invalidem =document.querySelector(".invalidem")
+
+
+inputEmail.addEventListener("focusout",function(){
+  if(inputEmail.value.length==0){
+    invalidem.classList.remove("d-none")
+    invalidem.innerHTML="Requird"
+  }else {
+      invalidem.classList.add("d-none")
+      if(inputEmail.value.length > 5){
+        if(inputEmail.value.includes("@") && inputEmail.value.includes(".com")){
+          invalidem.classList.add("d-none")
+        }else{
+          invalidem.classList.remove("d-none")
+          invalidem.innerHTML="Enter valid Email"
+          
+        }
+      }else{
+        invalidem.classList.remove("d-none")
+        invalidem.innerHTML="Enter valid Email"
+      }
+
+   
+  }   
+  
+})
+
+var obj=[];
+
+
+forms.addEventListener("submit",function(e){
+  e.preventDefault()
+
+
+  /// login in page
+    if(LoginSign.innerHTML=="Login"){
+      if(inputEmail.value.trim()==="test@shope.com" && inputPassw.value.trim()==="123456")
+      {
+    var alerts=document.getElementById("alert")
+        alerts.classList.add("active")
+        let stops= setInterval(function() {
+          var anchorTag = document.createElement('a');
+          anchorTag.setAttribute('href', 'index.html');
+          anchorTag.click()
+          alerts.classList.remove("active")
+          inputEmail.value=""
+          inputPassw.value=""
+          alerts.classList.remove("active")
+          
+        }, 1500);
+        
+      }
+    }   
+    
+    
+    if(LoginSign.innerHTML=="Sign Up") {    
+      if(swal("Sign Up Complete", "Thank Enjoy Life")){
+        
+        let stops= setInterval(function() {
+          var anchorTag = document.createElement('a');
+          anchorTag.setAttribute('href', 'index.html');
+          anchorTag.click()
+          alerts.classList.remove("active")
+          inputEmail.value=""
+          inputPassw.value=""
+          alerts.classList.remove("active")
+        
+},1500)
+      }
+}
+})
+
+
+
+
+
+</script>  
+<script src="main.js"></script>
+</body>
+</html>

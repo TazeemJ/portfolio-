@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2></h2>
+    <script>
+       
+      today = new Date();
+      var cmas = new Date(today.getFullYear(), 11, 25);
+      // if (today.getMonth() == 11) {
+      //   cmas.setFullYear(cmas.getFullYear() + 1);
+      // }
+      var one_day = 1000 * 60 * 60 * 24;
+      var one_mint = 1000 * 60 * 60 ;
+      var one_sec = 1000  ;
+      setInterval(function(){
+          ;
+          window.onload =function(){
+
+     console.log(
+    Math.floor((cmas.getTime() - today.getTime()) / one_day) +
+      " days left until Christmas!"
+  );
+  console.log(
+    Math.floor((cmas.getTime() - today.getTime()) / one_mint) +
+      " days left until Christmas!"
+  );
+            
+  let printD = ((cmas.getTime() - today.getTime()) / one_sec + " days left until Christmas!" )
+  
+  
+}
+},1)
+document.getElementsByTagName("h2")[0].innerHTML=`${printD}`
+
+    </script>
+</body>
+</html>

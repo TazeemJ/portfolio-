@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light on off Function</title>
+    <style>
+        /* body{
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            text-transform: uppercase;
+        }
+        img{
+            align-self: center;
+            width: 200px;
+        }
+        button{
+            align-self: center;
+            padding: 15px 10px;
+            background-color: rgba(255, 255, 255, 0.329);
+            border: none;
+            color: rgb(0, 238, 255);
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 12px;
+            box-shadow: 1px 1px 18px -7px white;
+        }
+        h1{
+            font-size: 48px;
+            font-weight: 800;
+        } */
+
+        /* light 2  */
+        body{    
+            background: rgb(0, 0, 0);
+            padding: 50px;
+        }
+        button{
+            cursor: pointer;
+            padding: 10px;
+            background: none;  
+            border-radius: 50px;
+            border:1px solid white;
+            color: white;
+           
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+            max-width:900px;
+            margin:0 auto;
+        }
+        img{
+            width: 300px;
+            cursor: pointer;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- light 1 -->
+    <!-- <h1>Tazeem</h1>
+    <h2>On off light function in js</h2>
+    <img id="imageoff" src="./././pic_bulboff.gif" alt="">
+    <button onclick="Bulbeon()">Turn On</button>
+    <button onclick="Bulbeoff()">Turn Off</button>
+    <script>
+        
+        function Bulbeon(){
+            document.getElementById("imageoff").src="./././pic_bulbon.gif"
+        }
+        function Bulbeoff(){
+            document.getElementById("imageoff").src="./././pic_bulboff.gif"
+        }
+        
+    </script> -->
+
+    <!-- light 2 -->
+    <div class="container">
+        <img  onclick="onblb()" id="pic" src="pic_bulboff.gif" alt="">
+        <button id="btn" onclick="onblb()">On</button>
+       </div>
+        <script>
+    
+   function onblb(){
+       let btn=document.getElementById("btn").innerHTML;
+       if(btn=="On"){
+           document.getElementById("pic").src="pic_bulbon.gif"
+           document.getElementById("btn").innerHTML="Off"
+           document.getElementById("btn").style="color:yellow;background:black;border:1px solid yellow;"
+       }else{
+           document.getElementById("btn").innerHTML="On"
+           document.getElementById("pic").src="pic_bulboff.gif"
+           document.getElementById("btn").style="color:white;border:1px solid white;"
+   
+       }
+   
+   }
+   </script>
+</body>
+</html>

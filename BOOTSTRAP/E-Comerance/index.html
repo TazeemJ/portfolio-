@@ -1,0 +1,1520 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <!-- page title -->
+
+      <title>Shope Online</title>
+
+      <!-- bootstrap link -->
+  
+
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous"
+      />
+      <!-- font link -->
+
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+        integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+
+      <!-- slider icon -->
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <!-- Include Slick carousel CSS -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    
+      <!-- Include Slick carousel JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+
+      <!-- style link -->
+      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="media.css" />
+    </head>
+    
+    <body>
+      
+  <!--*========================== NavBar coding start =================================-->
+
+    <header id="header" >
+          <div class="col-2" id="cartDiv" style="background-color: rgb(15, 23, 42) ;">
+          <div class="row py-0 px-2">
+          <div class="col-6 py-2">
+            <span style="font-size: 10px;color: white;" id="chartCounter">0 <span>Product</span></span>
+          </div>
+          <div class="col-6 text-end">
+            <a href="" class="btn py-2 px-1" style="color: #0d4c76; font-size: 12px;padding: 20px;">See all</a>
+          </div>
+          <div id="cartText" class="text-center" style="color: #686d6f;">cart is empty</div>
+          </div>
+          </div>
+      <nav class="navbar navbar-expand-md" id="nav">
+        <div class="container-fluid p-0 m-0">
+          <span class="d-block d-md-none px-3 py-1"><i class="fa-solid fa-bars icon"></i></span>
+          <a class="navbar-brand " href="index.html"><img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2FlogoShop.png&w=128&q=75" alt=""></a>
+          <button class="navbar-toggler left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="menu-icon icon "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                  <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                  <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                </svg></div>
+          </button>
+          <span class="collapse navbar-collapse " id="navbayrNav">
+            <div class="center w-100 d-none d-md-block" style="height: 51px;">
+              <div class="input-group ">
+                <div class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <input type="Search" class="form-control outline-none"  placeholder="Search">
+              </div>
+            </div>
+          </span>
+          <div class="right d-none d-md-block">
+            <div class="navl d-flex align-items-center">
+              <di v class="login-sign h-100 d-flex  align-items-center justify-content-between ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-left icon" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                </svg>
+                <p id="homeSign" class="m-0">login | SignUp </p>  
+              </di>
+              
+                <div id="cart">
+                  <div class="cart">0</div>
+                  <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3 icon "  viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </nav>
+      <div class="navbars  d-block d-md-none pb-2 ">
+        <div class="container-fluid px-0 mt-4  ">
+              <div class="row d-flex">
+                    <div class="col-md-10  col-sm-9 col-9 d-flex pe-0 ">
+                              <div class="nav-inputs">
+                                <div class="center">
+                                  <div class="input-group px-0" style="height:40px">
+                                    <div class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                    <input type="Search" class="form-control outline-none"  placeholder="Search">
+                                  </div>
+                                </div>
+                              </div>
+                                    
+                      </div>
+                      <div class="col-md-2  col-sm-3 col-3 ps-3 d-flex justify-content-end align-items-center">
+                      <div class="nav-icon px-sm-2 px-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-left icon" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                          <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                        </svg>
+                      </di>
+                      </div>
+                      <div id="cart" class="ms-3 ">
+                        <div class="cart">0</div>
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3 icon "  viewBox="0 0 16 16">
+                          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                      </div>
+                        
+                  </div>                            
+                            
+              </div>
+                                  
+        </div>
+
+        </div>
+
+
+        <!-- navbar 3 -->
+                <div class="navbar3 d-none d-md-block">
+                  <div class="container-fluid px-0 mx-0">
+                    <div class="row px-0 text-white">
+                          <div class="col-xl-11 col-10  px-0 mx-0 py-2 d-flex align-items-center">
+                            <span class="m d-flex align-items-center"><i class="fa-solid fa-bars " style="font-size: 20px;"></i></span>
+                            <h5 class="mb-0 mx-2" style="font-weight: 600;">Category of Goods </h5> 
+                            | <p class="mb-0 mx-2 mt-1">%&nbsp;Offers and Discounts</p>
+                            <h4 class="d-flex align-items-center mb-0 "><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="12" height="12" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                              <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                            </svg>The Best-Sells</h4>
+                          </div>
+                          <div class="col-xl-1 col-2 pe-3  ps-0 md-1200px d-md-flex align-items-md-center">
+                            <div  class="navbar3-right d-flex align-items-center d-flex d-lg-center w-100">
+                              <h4 class="mb-0 mx-1  ">En&nbsp;</h4> 
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="17" height="17" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                            </svg>
+                            <svg id="lightModeBtn" xmlns="http://www.w3.org/2000/svg" class="ms-auto"  width="17" height="17" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                              <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                            </svg>
+                          
+                            <svg id="darkModeBtn" class="ms-auto d-none" xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                            </svg>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+    </header>
+  <!--========================== header coding end ====================================-->
+
+
+
+    <div id="carousel" class="" >
+        <div class="container-fluid  h-100">  
+          <div id="carouselExampleDark" class="carousel h-100 carousel-light slide px-lg-5 px-md-3 px-2 d-block w-100 " data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            
+            </div>
+            <div class="carousel-inner  h-100 "> <!-- Set the height for carousel-inner -->
+              <div class="carousel-item active  h-100">
+                <img src="https://cdn.sanity.io/images/wci92bk4/production/f797319f532eced4898d871b8d23476579ecb3f9-2000x700.webp?fit=max&auto=format" width="100%" class="d-block h-100 " alt="Slide 1" />
+                <div class="carousel-caption">
+                  <h3>Have the best Experiencese</h3>
+                  <p>
+                    We provide the best Experience with the most popular Brands.  With a warranty of 18 months, you can be confident in your choice
+                  </p>
+                  <a href="#" class="btn btn-outline-none">Show Now</a>
+                </div>
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://cdn.sanity.io/images/wci92bk4/production/a2df660b018e9903768c22d932be54f50e5395d9-2000x700.webp?fit=max&auto=format" class="d-block w-100 h-100" alt="Slide 2" />
+                <div class="carousel-caption">
+                  <h3>Variety in choice</h3>
+                  <p>
+                    When it comes to Beauty and Efficiency. We specialize in providing stationery and office sets that are beautiful and high quality.
+                  </p>
+                  <a href="#" class="btn btn-outline-none">Show Now</a>
+                </div>
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://cdn.sanity.io/images/wci92bk4/production/93b3b1981f3dd5fe3188cb8b9ab9be8a9ec16d5a-2000x700.webp?fit=max&auto=format" class="d-block w-100 h-100" alt="Slide 3" />
+                <div class="carousel-caption">
+                  <h3>Accentuates your Beauty</h3>
+                  <p>
+                    allergen-free, people with all skin types can find products they need. Approved by the World Health Organization, products from world-renowned brands.
+                  </p>
+                  <a href="#" class="btn btn-outline-none">Show Now</a>
+                </div>
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://cdn.sanity.io/images/wci92bk4/production/9b8627c7d0681dbca28cc101b7909e2f7488aa3f-2000x700.webp?fit=max&auto=format"  class="d-block w-100 h-100" alt="Slide 4" />
+                <div class="carousel-caption ">
+                  <h3>Modern Home</h3>
+                  <p>
+                    When it comes to Beauty and Efficiency. We specialize in providing stationery and office sets that are beautiful and high quality.
+                  </p>
+                  <a href="#" class="btn btn-outline-none">Show Now</a>
+                </div>
+              </div>
+              <div class="carousel-item h-100">
+                <img src="https://cdn.sanity.io/images/wci92bk4/production/5e8b7186318d7c1c84ed5e86afc5a43b38c835fb-5399x3599.jpg?fit=max&auto=format"  class="d-block w-100 h-100" alt="Slide 4" />
+                <div class="carousel-caption ">
+                  <h3>Beauty and Comfort</h3>
+                  <p>
+                    enjoy beautiful moments of satisfaction and peace with your loved ones at home with products designed according to the most recent and prominent styles.
+                  </p>
+                  <a href="#" class="btn btn-outline-none">Show Now</a>
+                </div>
+              </div>
+            
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <div class=" cbtn " aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+              </svg> 
+            </div>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <div class="cbtn" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                </svg> 
+              </div>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </div>  
+  </div>
+
+
+  <!--====================== testimonail coding start ================================-->
+
+  <div id="testimonial" class="pt-5 pb-1" style="padding: 0px 55px;">
+      <div class="container px-0">
+            <div class="row text-white gx-0 px-lg-5 px-0">
+                <div class="col-6 col-md-3 mt-sm-0 my-3 d-flex justify-content-center">
+                  <div class="testimonal-content ">
+                    <img src="images/testimonail.png" alt="" width="53px" class="img-fluid
+                    ">
+                    <p class=" mt-2" style="font-size: 18px;">express delivery</p>
+                  </div>
+                </div>
+                
+                <div class="col-6 col-md-3 my-sm-0 my-3 d-flex justify-content-center">
+                  <div class="testimonal-content ">
+                    <img src="images/testimonail2.png" alt="" width="50px" class="img-fluid
+                    ">
+                    <p class="mt-2" style="font-size: 18px;">payment on the spot</p>
+                  </div>
+                </div>
+                
+                <div class="col-6 col-md-3 my-sm-0 my-3 d-flex justify-content-center">
+                  <div class="testimonal-content ">
+                    <img src="images/testimonail3.png" alt="" width="50px" class="img-fluid
+                    ">
+                    <p class=" mt-2" style="font-size: 18px;">24/7 support</p>
+                  </div>
+                </div>
+                
+                <div class="col-6 col-md-3 my-sm-0 my-3 d-flex justify-content-center">
+                  <div class="testimonal-content ">
+                    <img src="images/testimonail4.png" alt="" width="50px" class="img-fluid
+                    ">
+                    <p class=" mt-2" style="font-size: 18px;">Guarantee the originality</p>
+                  </div>
+                </div>
+                
+              
+            </div>
+      </div>
+  </div>
+
+
+  <!--===================== Offers section coding star=================================-->
+
+  <div id="offers" style="padding:30px 28px;" >
+    
+      <div class="container">
+          
+        <div class="row">
+                <div class="col-12 px-0 mb-3 " style="color: #ffe7e7;">Offer Data</div>
+        </div>
+                <div class="row  " style="background-color:#37bccee9;">
+                  <div class="col-md-3 col-sm-4 col-6 text-left px-0">
+                    <img src="https://ecommernce-store.vercel.app/_next/static/media/offersbg.b5c6b0e9.webp" class="img-fluid  h-100 w-100"  alt="">
+                  </div>
+                  <div class="col-md-9  col-sm-8 col-6  px-3">      
+
+                  <div class="offers-slider w-100">
+                              <div>
+                                <div class="offer-content py-3 px-1 my-3 px-3 mx-2 " style="background-color: #1e293d;border-radius: 10px;">
+                                  <div class="offer-img  text-center d-flex justify-content-center px-3">
+                                    <img height="160px"   class="img-fluid" src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fa6a38f6a1f31dafe5f3294a4384f865b7d25a344-370x394.png%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" alt="">
+                                  </div>
+                                  <div class="persantage-img">
+                                    <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fdiscount-icon%2Fdiscount.webp&w=48&q=75" width="30px" alt="">
+                                    
+                                  </div>
+                                  <div class="offer-text mt-3 px-0 "> 
+                                    <h3 style="font-size: 13px; color: #8c9aaf;" class="px-0"> Brushed Raglan Sweatshirt</h3>
+                                    <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                                      <sup>Rs</sup>
+                                      <del>4,000</del>
+                                    </div>
+                                    <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                                      <sup>Rs</sup>
+                                      <ind>3,900</ind>
+                                      <sub style="color: #bbf7d0;">(-%1)</s>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div>
+                              <div class="offer-content py-3 px-1 my-3 px-3 mx-2 " style="background-color: #1e293d;border-radius: 10px;">
+                                <div class="offer-img  text-center d-flex justify-content-center px-3">
+                                  <img height="160px"   class="img-fluid" src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2F4d7a22df76b3b51debbe321da375272a790f9ed7-530x470.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75"  alt="">
+                                  
+                                </div>
+                                <div class="persantage-img">
+                                  <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fdiscount-icon%2Fdiscount.webp&w=48&q=75" width="30px" alt="">
+                                </div>
+                                <div class="offer-text mt-3 px-0 "> 
+                                  <h3 style="font-size: 13px; color: #8c9aaf;" class="px-0"> APPLE iPhone 13 Pro ...</h3>
+                                  <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                                    <sup>Rs</sup>
+                                    <del>4,000</del>
+                                  </div>
+                                  <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                                    <sup>Rs</sup>
+                                    <ind>3,900</ind>
+                                    <sub style="color: #bbf7d0;">(-%1)</s>
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                          </div>
+                            <div>
+                              <div class="offer-content py-3 px-1 my-3 px-3 mx-2 newset-persantages" style="background-color: #1e293d;border-radius: 10px;">
+                                <div class="offer-img  text-center d-flex justify-content-center px-3">
+                                  <img height="160px"   class="img-fluid" src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2F0072c2eb21e7024053cb59a68b89b2afb603e35f-500x500.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" alt="">
+                                </div>
+                                <div class="persantage-img">
+                                  <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fdiscount-icon%2Fdiscount.webp&w=48&q=75" width="30px" alt="">
+                                  
+                                </div>
+                                <div class="offer-text mt-3 px-0 "> 
+                                  <h3 style="font-size: 15px; color: #8c9aaf;" class="px-0"> JBL Xtreme 2 Rugged/...</h3>
+                                  <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                                    <sup>Rs</sup>
+                                    <del>4,000</del>
+                                  </div>
+                                  <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                                    <sup>Rs</sup>
+                                    <ind>3,900</ind>
+                                    <sub style="color: #bbf7d0;">(-%1)</s>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+                        
+                            <div >
+                              <div class="offer-content py-3 px-1 my-3 px-3 mx-2 newset-persantages" style="background-color: #1e293d;border-radius: 10px;">
+                                <div class="offer-img  text-center d-flex justify-content-center px-3">
+                                  <img height="160px"   class="img-fluid" src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fd6cc0c287f7ee7a58d03f293aa50370d36823273-530x470.webp%3Ffit%3Dmax%26auto%3Dformat&w=256&q=75" alt="">
+                                </div>
+                                <div class="persantage-img">
+                                  <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fdiscount-icon%2Fdiscount.webp&w=48&q=75" width="30px" alt="">
+                                  
+                                </div>
+                                <div class="offer-text mt-3 px-0 "> 
+                                  <h3 style="font-size: 14px; color: #8c9aaf;" class="px-0"> SAMSUNG Galaxy A22 ...</h3>
+                                  <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                                    <sup>Rs</sup>
+                                    <del>4,000</del>
+                                  </div>
+                                  <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                                    <sup>Rs</sup>
+                                    <ind>3,900</ind>
+                                    <sub style="color: #bbf7d0;">(-%1)</s>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+
+
+                            <div class="newset-persantages">
+                              <div class="offer-content py-3 px-1 my-3 px-3 mx-2 newset-persantages" style="background-color: #1e293d;border-radius: 10px;">
+                                <div class="offer-img  text-center d-flex justify-content-center px-3">
+                                  <img height="160px"   class="img-fluid" src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fa88ab53a527c434d07b7b418e0993b31f405695c-600x532.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" alt="">
+                                </div>
+                                <div class="persantage-img">
+                                  <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fdiscount-icon%2Fdiscount.webp&w=48&q=75" width="30px" alt="">
+                                  
+                                </div>
+                                <div class="offer-text mt-3 px-0 "> 
+                                  <h3 style="font-size: 14px; color: #8c9aaf;" class="px-0"> SAMSUNG Galaxy A22 ...</h3>
+                                  <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                                    <sup>Rs</sup>
+                                    <del>4,000</del>
+                                  </div>
+                                  <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                                    <sup>Rs</sup>
+                                    <ind>3,900</ind>
+                                    <sub style="color: #bbf7d0;">(-%1)</s>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          
+                            <div class="newset-persantages">
+                              <div class="offer-content py-3 px-1 my-3 px-3 mx-2 newset-persantages" style="background-color: #1e293d;border-radius: 10px;">
+                                <div class="offer-img  text-center d-flex justify-content-center px-3">
+                                  <img height="160px"   class="img-fluid" src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fa88ab53a527c434d07b7b418e0993b31f405695c-600x532.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" alt="">
+                                </div>
+                                <div class="persantage-img">
+                                  <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fdiscount-icon%2Fdiscount.webp&w=48&q=75" width="30px" alt="">
+                                  
+                                </div>
+                                <div class="offer-text mt-3 px-0 "> 
+                                  <h3 style="font-size: 14px; color: #8c9aaf;" class="px-0"> SAMSUNG Galaxy A22 ...</h3>
+                                  <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                                    <sup>Rs</sup>
+                                    <del>4,000</del>
+                                  </div>
+                                  <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                                    <sup>Rs</sup>
+                                    <ind>3,900</ind>
+                                    <sub style="color: #bbf7d0;">(-%1)</s>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          
+
+                          
+
+
+                  </div>
+                </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--=============================== ourCatageriys code start ======================-->
+
+  <div id="ourCatageriys" class="mt-sm-5 pt-3 " style="padding: 0px 28px;">
+    <div class="container d-none d-xl-block">
+
+      <div class="row mb-3 ">
+        <div class="col-12 mb-4">
+          <h2 id="ourCatageriysHeading"  style="color: #e2e8f0;text-align: center;">CategoryOfGoods</h2>
+        </div>
+            <div class="col-4   px-2 d-flex align-items-md-center " >
+              <div class="ourCatageriys-content d-flex d-flex align-items-md-center "     style="background-color: #0d4c76;border-radius: 10px;padding: 50px 25px;height: 100%;">
+                <div class="our-content-de d-flex flex-column" >
+                        <h3 style="font-size: 20px;color: #e2e8f0;">
+                          Digital Products
+                        </h3>
+                        <p style="font-size: 12px;color: #e2e8f0;" >We offer the newest products at the most competitive prices</p>
+                        <a href="" class="align-self-start" style="font-size:12px;background-color: #a71b4a;color: #ffe7e7;text-decoration: none;padding: 10px;border-radius: 5px; ">See All Products</a>
+                </div>
+                <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-img%2Fdigital-category.webp&w=384&q=75"  class="image-fluid ms-2" width="170px" alt="" class="img-fluid"  >
+              </div>
+                  
+            </div>
+          
+            <div class="col-4   px-2 d-flex align-items-md-center" >
+                    <div class="ourCatageriys-content h-100 d-flex d-flex align-items-md-center "     style="background-color: #892a19;border-radius: 10px;padding: 43px 25px;">
+                            <div class="our-content-de  d-flex flex-column" >
+                                    <h3 style="font-size: 20px;color: #e2e8f0;">
+                                      Fashion and Clothes
+                                    </h3>
+                                    <p style="font-size: 12px;color: #e2e8f0;" >The most popular brands with the most reasonable prices</p>
+                                    <a href="Allproduct.html" class="" style="font-size:12px;background-color: #a71b4a;color: #ffe7e7;text-decoration: none;padding: 10px;border-radius: 5px; ">See All Products</a>
+                            </div>
+                            <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-img%2Ffashion-category.webp&w=640&q=75"  class="img-fluid ms-2" width="210px" alt="" >
+                    </div>
+                  
+            </div>
+
+            <div class="col-4 px-2 d-flex align-items-center " >
+                  <div class="row h-100 d-flex flex-column">
+                                <div class="col py-1">
+                                  <div class="ourCatageriys-content  d-flex align-items-center "     style="background-color: #6D305F;border-radius: 10px;padding: 5px 25px;height: 100%;">
+                                    <div class="our-content-de d-flex flex-column" >
+                                            <h3 style="font-size: 20px;color: #e2e8f0; ">
+                                              Cosmetic Products
+                                            </h3>
+                                            <p style="font-size: 12px;color: #e2e8f0;" >Anti-allergy products suitable for all skin types from reputable brands</p>
+                                            <a href="Allproduct.html" class="align-self-start" style="font-size:12px;background-color: #a71b4a;color: #ffe7e7;text-decoration: none;padding: 8px;border-radius: 5px; ">See All Products</a>
+                                    </div>
+                                    <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-img%2Fbeauty-category.webp&w=384&q=75" width="160px" alt="" class="img-fluid">
+                                    </div>
+                            
+                                      </div>
+                          <div class="col py-1 mt-1">
+                            <div class="ourCatageriys-content d-flex  d-flex align-items-md-center "     style="background-color: #650606;border-radius: 10px;padding: 5px 25px;height: 100%;">
+                              <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-img%2Fsport-category.webp&w=384&q=75"  class="img-fluid me-3" width="110px" alt="" >
+                                    <div class="our-content-de d-flex flex-column" >
+                                            <h3 style="font-size: 20px;color: #e2e8f0;">
+                                              Sport and Trip
+                                            </h3>
+                                            <p style="font-size: 13px;color: #e2e8f0;" >High-quality and durable products</p>
+                                            <a href="Allproduct.html" class="align-self-start" style="font-size:12px;background-color: #a71b4a;color: #ffe7e7;text-decoration: none;padding: 10px;border-radius: 5px; ">See All Products</a>
+                                    </div>
+                            </div>
+                          </div>
+                  </div>
+                  
+            </div>
+            
+      </div>
+      <div class="row ">
+          <div class="col-7   px-2 d-flex align-items-md-center " >
+                <div class="ourCatageriys-content d-flex d-flex align-items-md-center w-100 "     style="background-color: #0d4c76;border-radius: 10px;padding: 0px 25px;height: 100%;">
+                  <div class="our-content-de d-flex flex-column" >
+                          <h3 style="font-size: 20px;color: #e2e8f0;">
+                            Digital Products
+                          </h3>
+                          <p style="font-size: 12px;color: #e2e8f0;" >We offer the newest products at the most competitive prices</p>
+                          <a href="Allproduct.html" class="align-self-start" style="font-size:12px;background-color: #a71b4a;color: #ffe7e7;text-decoration: none;padding: 10px;border-radius: 5px; ">See All Products</a>
+                  </div>
+                  <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-img%2Fhouse-category.webp&w=640&q=75" width="310px" alt="" class="img-fluid">
+                </div>
+                
+          </div>
+              <div class="col-5 d-none d-md-block h-100">
+                <div class="row">
+                  <div class=" col-6   px-2 d-flex align-items-md-center " >
+                    <div class="ourCatageriys-content  d-flex flex-column  justify-content-between align-items-center"     style="background-color: #0d4c76;border-radius: 10px;padding: 10px 25px;height: 100%;">
+                      <div class="our-content-de d-flex flex-column align-items-center " >
+                              <h3 style="font-size: 20px;color: #e2e8f0;">
+                                Toys and Baby
+                              </h3>
+                              <p style="font-size: 12px;color: #e2e8f0;text-align: center;" >A combination of entertainment and creativity</p>
+                              <a href="Allproduct.html" class="align-self-center" style="font-size:12px;background-color: #a71b4a;color: #ffe7e7;text-decoration: none;padding: 10px;border-radius: 5px; ">See All Products</a>
+                      </div>
+                      <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-img%2Ftoy-category.webp&w=384&q=75" width="130px" alt="" class="img-fluid">
+                    </div>
+                    
+                    </div>
+                  <div class=" col-6  px-2 d-flex align-items-md-center overflow-hidden " >
+                    <div class="ourCatageriys-content d-flex d-flex align-items-md-center overflow-hidden h-100 "     style="background-color: #6A4202;border-radius: 10px;padding: 0px 10px;height: 100%;">
+                      <div class="our-content-de d-flex flex-column me-1" >
+                              <h3 style="font-size: 20px;color: #e2e8f0;">
+                                Books, Stationery and Art
+                              </h3>
+                              <p style="font-size: 12px;color: #e2e8f0;" >Variety in choice</p>
+                              <a href="Allproduct.html" class="align-self-start" style="font-size:12px;background-color: #a71b4a;color: #ffe7e7;text-decoration: none;padding: 10px;border-radius: 5px; ">See All Products</a>
+                      </div>
+                      <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-img%2Fstationery-category.webp&w=384&q=75" width="100px" class="img-fluid" alt="" >
+                    </div>
+                    
+                    </div>
+                </div>
+              </div>
+          
+                
+          </div>
+          
+    </div>
+    <div class="container d-blcok d-xl-none">
+
+      <div class="row">
+        <div class="row mb-3 ms-0">
+          <div class="col-12 mb-3">
+            <h2 style="font-size: 32px; color: #e2e8f0;text-align: center;">CategoryOfGoods</h2>
+          </div>
+        <div class="col-lg-3  col-md-4 col-sm-6 mt-4 ">
+          <div class="ourCatageriy-content-md text-center ">
+            <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-icon%2Fdigital-category.webp&w=96&q=75" width="45px" alt="">
+            <h3 style="font-size: 15px; font-weight: 700;"   class="mt-4 text-white">Digital Products</h3>
+          </div>
+        </div>
+        <div class="col-lg-3  col-md-4 col-sm-6 mt-4">
+          <div class="ourCatageriy-content-md text-center">
+            <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-icon%2Ffashion-category.webp&w=96&q=75" width="45px"  alt="">
+            <h3 style="font-size: 15px; font-weight: 700;"   class="mt-4 text-white">Fashion and Clothes</h3>
+          </div>
+        </div>
+        <div class="col-lg-3  col-md-4 col-sm-6 mt-4">
+          <div class="ourCatageriy-content-md text-center">
+            <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-icon%2Fbeauty-category.webp&w=96&q=75" width="45px" alt="">
+            <h3 style="font-size: 15px; font-weight: 700;"   class="mt-4 text-white">Cosmetic Products</h3>
+          </div>
+        </div>
+        <div class="col-lg-3  col-md-4 col-sm-6 mt-4">
+          <div class="ourCatageriy-content-md text-center">
+            <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-icon%2Fsport-category.webp&w=96&q=75" width="45px" alt="">
+            <h3 style="font-size: 15px; font-weight: 700;"   class="mt-4 text-white">Sport and Trip</h3>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 mt-4">
+          <div class="ourCatageriy-content-md text-center">
+            <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-icon%2Fhouse-category.webp&w=96&q=75" width="45px" alt="">
+            <h3 style="font-size: 15px; font-weight: 700;"   class="mt-4 text-white">Furniture and kitchen</h3>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 mt-4">
+          <div class="ourCatageriy-content-md text-center">
+            <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-icon%2Ftoy-category.webp&w=96&q=75" width="45px" alt="">
+            <h3 style="font-size: 15px; font-weight: 700;"   class="mt-4 text-white">Toys and Baby</h3>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4">
+          <div class="ourCatageriy-content-md text-center">
+            <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fcategory-icon%2Fstationery-category.webp&w=96&q=75" width="45px" alt="">
+            <h3 style="font-size: 15px; font-weight: 700;"   class="mt-4 text-white">Books, Stationery and Art</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--=============================== Newest code start ======================-->
+
+
+  <div id="newest" style="padding: 50px 16px;">
+    <div class="container">
+          <div class="row px-1">
+            <div class="col-12 my-4">
+              <h2 style="font-size: 28px; color: #e2e8f0;text-align: center;">Newest</h2>
+            </div>
+
+
+            <div class="col-xxl-2  col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-3 my-sm-2 newset-persantage  px-sm-2 px-0" >
+              <div class="newest-content" style="border-radius: 10px;overflow: hidden;" >
+                <div class="row">
+                  <div class="col-sm-12 col-6 px-0">
+                    <div class="newest-image py-3 text-center" style="background-color: #94a3b84d; height: 200px;">
+                      <img src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fa88ab53a527c434d07b7b418e0993b31f405695c-600x532.webp%3Ffit%3Dmax%26auto%3Dformat&w=384&q=75" width="181px" alt="" height="100%" class="img-fluid">
+                      
+                      <div class="persantage">
+                        <div class="star_12">%</div>
+                      </div>
+                      <div class="left-icons persantage col-1 col-sm-2 py-3 " style="background-color: #1e293d33; border-radius: 50px;">
+                        <svg class="hove-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                        </svg>
+                        <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                        </svg><br>
+                        
+                        <svg  class="hove-icon my-3"   xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                          <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                        </svg> 
+                        <svg class="d-none my-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                          <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                        </svg><br>
+                        <svg class="hove-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <svg class="hove-icon d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                          <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-6 px-0">
+                    <div class="newest-text d-flex flex-column h-100 align-items-center px-sm-4 px-3 py-2 " style="background-color: #1E293B;">
+                      <div class="newest-star justify-content-center d-flex mb-3">
+                          <div class="yellow-satr">
+                            <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                            <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                            <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                            <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                            <i class="fa-solid fa-star" style="color: black;font-size: 10px;" ></i>
+                          </div>
+
+                      </div>
+                      <h3 style="font-size: 12px; color: #8c9aaf;line-height: 20px; ">SAMSUNG Galaxy A22 5G – 64 GB, Grey</h3>
+                      <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                        <sup>Rs</sup>
+                        <del>60,000</del>
+                      </div>
+                      <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                        <sup>Rs</sup>
+                        <ind>58,000</ind>
+                        <sub style="color: #bbf7d0;">(-%2)</s>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                <div class="col-xxl-2  col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-3 my-sm-2 newset-persantage  px-sm-2 px-0" >
+                  <div class="newest-content" style="border-radius: 10px;overflow: hidden;" >
+                    <div class="row">
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-image py-3 text-center" style="background-color: #94a3b84d; height: 200px;">
+                          <img src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2F4d7a22df76b3b51debbe321da375272a790f9ed7-530x470.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" width="181px" alt="" height="100%" class="img-fluid">
+                          
+                          <div class="persantage">
+                            <div class="star_12">%</div>
+                          </div>
+                          <div class="left-icons persantage col-1 col-sm-2 py-3 " style="background-color: #1e293d33; border-radius: 50px;">
+                            <svg class="hove-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg><br>
+                            
+                            <svg  class="hove-icon my-3"   xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                              <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                            </svg> 
+                            <svg class="d-none my-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg><br>
+                            <svg class="hove-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <svg class="hove-icon d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-text d-flex flex-column h-100 align-items-center px-sm-4 px-3 py-2 " style="background-color: #1E293B;">
+                          <div class="newest-star justify-content-center d-flex mb-3">
+                              <div class="yellow-satr">
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: black;font-size: 10px;" ></i>
+                              </div>
+
+                          </div>
+                          <h3 style="font-size: 12px; color: #8c9aaf;line-height: 20px; ">SAMSUNG Galaxy A22 5G – 64 GB, Grey</h3>
+                          <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                            <sup>Rs</sup>
+                            <del>60,000</del>
+                          </div>
+                          <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                            <sup>Rs</sup>
+                            <ind>58,000</ind>
+                            <sub style="color: #bbf7d0;">(-%2)</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-xxl-2  col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-3 my-sm-2 newset-persantage  px-sm-2 px-0" >
+                  <div class="newest-content" style="border-radius: 10px;overflow: hidden;" >
+                    <div class="row">
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-image py-3 text-center" style="background-color: #94a3b84d; height: 200px;">
+                          <img src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fa88ab53a527c434d07b7b418e0993b31f405695c-600x532.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" width="181px" alt="" height="100%" class="img-fluid">
+                          
+                          <div class="persantage">
+                            <div class="star_12">%</div>
+                          </div>
+                          <div class="left-icons persantage col-1 col-sm-2 py-3 " style="background-color: #1e293d33; border-radius: 50px;">
+                            <svg class="hove-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg><br>
+                            
+                            <svg  class="hove-icon my-3"   xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                              <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                            </svg> 
+                            <svg class="d-none my-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg><br>
+                            <svg class="hove-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <svg class="hove-icon d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-text d-flex flex-column h-100 align-items-center px-sm-4 px-3 py-2 " style="background-color: #1E293B;">
+                          <div class="newest-star justify-content-center d-flex mb-3">
+                              <div class="yellow-satr">
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: black;font-size: 10px;" ></i>
+                              </div>
+
+                          </div>
+                          <h3 style="font-size: 12px; color: #8c9aaf;line-height: 20px; ">SAMSUNG Galaxy A22 5G – 64 GB, Grey</h3>
+                          <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                            <sup>Rs</sup>
+                            <del>60,000</del>
+                          </div>
+                          <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                            <sup>Rs</sup>
+                            <ind>58,000</ind>
+                            <sub style="color: #bbf7d0;">(-%2)</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                
+                <div class="col-xxl-2  col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-3 my-sm-2 newset-persantage  px-sm-2 px-0" >
+                  <div class="newest-content" style="border-radius: 10px;overflow: hidden;" >
+                    <div class="row">
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-image py-3 text-center" style="background-color: #94a3b84d; height: 200px;">
+                          <img src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2F0072c2eb21e7024053cb59a68b89b2afb603e35f-500x500.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" width="181px" alt="" height="100%" class="img-fluid">
+                          
+                          <div class="persantage">
+                            <div class="star_12">%</div>
+                          </div>
+                          <div class="left-icons persantage col-1 col-sm-2 py-3 " style="background-color: #1e293d33; border-radius: 50px;">
+                            <svg class="hove-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg><br>
+                            
+                            <svg  class="hove-icon my-3"   xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                              <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                            </svg> 
+                            <svg class="d-none my-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg><br>
+                            <svg class="hove-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <svg class="hove-icon d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-text d-flex flex-column h-100 align-items-center px-sm-4 px-3 py-2 " style="background-color: #1E293B;">
+                          <div class="newest-star justify-content-center d-flex mb-3">
+                              <div class="yellow-satr">
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: black;font-size: 10px;" ></i>
+                              </div>
+
+                          </div>
+                          <h3 style="font-size: 12px; color: #8c9aaf;line-height: 20px; ">SAMSUNG Galaxy A22 5G – 64 GB, Grey</h3>
+                          <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                            <sup>Rs</sup>
+                            <del>60,000</del>
+                          </div>
+                          <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                            <sup>Rs</sup>
+                            <ind>58,000</ind>
+                            <sub style="color: #bbf7d0;">(-%2)</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-xxl-2  col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-3 my-sm-2 newset-persantage  px-sm-2 px-0" >
+                  <div class="newest-content" style="border-radius: 10px;overflow: hidden;" >
+                    <div class="row">
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-image py-3 text-center" style="background-color: #94a3b84d; height: 200px;">
+                          <img src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fa6a38f6a1f31dafe5f3294a4384f865b7d25a344-370x394.png%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75  " width="150px" alt="" height="100%" class="img-fluid">
+                          
+                          <div class="persantage">
+                            <div class="star_12">%</div>
+                          </div>
+                          <div class="left-icons persantage col-1 col-sm-2 py-3 " style="background-color: #1e293d33; border-radius: 50px;">
+                            <svg class="hove-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg><br>
+                            
+                            <svg  class="hove-icon my-3"   xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                              <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                            </svg> 
+                            <svg class="d-none my-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg><br>
+                            <svg class="hove-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <svg class="hove-icon d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-text d-flex flex-column h-100 align-items-center px-sm-4 px-3 py-2 " style="background-color: #1E293B;">
+                          <div class="newest-star justify-content-center d-flex mb-3">
+                              <div class="yellow-satr">
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: black;font-size: 10px;" ></i>
+                              </div>
+
+                          </div>
+                          <h3 style="font-size: 12px; color: #8c9aaf;line-height: 20px; ">SAMSUNG Galaxy A22 5G – 64 GB, Grey</h3>
+                          <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                            <sup>Rs</sup>
+                            <del>60,000</del>
+                          </div>
+                          <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                            <sup>Rs</sup>
+                            <ind>58,000</ind>
+                            <sub style="color: #bbf7d0;">(-%2)</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xxl-2  col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-3 my-sm-2 newset-persantage  px-sm-2 px-0" >
+                  <div class="newest-content" style="border-radius: 10px;overflow: hidden;" >
+                    <div class="row">
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-image py-3 text-center" style="background-color: #94a3b84d; height: 200px;">
+                          <img src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fffc858fc182553bee2aaff34fe728bf07d15f2b5-278x296.png%3Ffit%3Dmax%26auto%3Dformat&w=384&q=75   " width="150px" alt="" height="100%" class="img-fluid">
+                          
+                          <div class="persantage">
+                            <div class="star_12">%</div>
+                          </div>
+                          <div class="left-icons persantage col-1 col-sm-2 py-3 " style="background-color: #1e293d33; border-radius: 50px;">
+                            <svg class="hove-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg><br>
+                            
+                            <svg  class="hove-icon my-3"   xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                              <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                            </svg> 
+                            <svg class="d-none my-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg><br>
+                            <svg class="hove-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <svg class="hove-icon d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-text d-flex flex-column h-100 align-items-center px-sm-4 px-3 py-2 " style="background-color: #1E293B;">
+                          <div class="newest-star justify-content-center d-flex mb-3">
+                              <div class="yellow-satr">
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: black;font-size: 10px;" ></i>
+                              </div>
+
+                          </div>
+                          <h3 style="font-size: 12px; color: #8c9aaf;line-height: 20px; ">SAMSUNG Galaxy A22 5G – 64 GB, Grey</h3>
+                          <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                            <sup>Rs</sup>
+                            <del>60,000</del>
+                          </div>
+                          <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                            <sup>Rs</sup>
+                            <ind>58,000</ind>
+                            <sub style="color: #bbf7d0;">(-%2)</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xxl-2  col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-3 my-sm-2 newset-persantage  px-sm-2 px-0" >
+                  <div class="newest-content" style="border-radius: 10px;overflow: hidden;" >
+                    <div class="row">
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-image py-3 text-center" style="background-color: #94a3b84d; height: 200px;">
+                          <img src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2F0072c2eb21e7024053cb59a68b89b2afb603e35f-500x500.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" width="150px" alt="" height="100%" class="img-fluid">
+                          
+                          <div class="persantage">
+                            <div class="star_12">%</div>
+                          </div>
+                          <div class="left-icons persantage col-1 col-sm-2 py-3 " style="background-color: #1e293d33; border-radius: 50px;">
+                            <svg class="hove-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg><br>
+                            
+                            <svg  class="hove-icon my-3"   xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                              <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                            </svg> 
+                            <svg class="d-none my-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg><br>
+                            <svg class="hove-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <svg class="hove-icon d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-text d-flex flex-column h-100 align-items-center px-sm-4 px-3 py-2 " style="background-color: #1E293B;">
+                          <div class="newest-star justify-content-center d-flex mb-3">
+                              <div class="yellow-satr">
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: black;font-size: 10px;" ></i>
+                              </div>
+
+                          </div>
+                          <h3 style="font-size: 12px; color: #8c9aaf;line-height: 20px; ">SAMSUNG Galaxy A22 5G – 64 GB, Grey</h3>
+                          <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                            <sup>Rs</sup>
+                            <del>60,000</del>
+                          </div>
+                          <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                            <sup>Rs</sup>
+                            <ind>58,000</ind>
+                            <sub style="color: #bbf7d0;">(-%2)</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-2  col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-3 my-sm-2 newset-persantage  px-sm-2 px-0" >
+                  <div class="newest-content" style="border-radius: 10px;overflow: hidden;" >
+                    <div class="row">
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-image py-3 text-center" style="background-color: #94a3b84d; height: 200px;">
+                          <img src="https://ecommernce-store.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fwci92bk4%2Fproduction%2Fa88ab53a527c434d07b7b418e0993b31f405695c-600x532.webp%3Ffit%3Dmax%26auto%3Dformat&w=640&q=75" width="150px" alt="" height="100%" class="img-fluid">
+                          
+                          <div class="persantage">
+                            <div class="star_12">%</div>
+                          </div>
+                          <div class="left-icons persantage col-1 col-sm-2 py-3 " style="background-color: #1e293d33; border-radius: 50px;">
+                            <svg class="hove-icon"  xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                            </svg><br>
+                            
+                            <svg  class="hove-icon my-3"   xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                              <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                            </svg> 
+                            <svg class="d-none my-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                              <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                            </svg><br>
+                            <svg class="hove-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                            <svg class="hove-icon d-none" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-6 px-0">
+                        <div class="newest-text d-flex flex-column h-100 align-items-center px-sm-4 px-3 py-2 " style="background-color: #1E293B;">
+                          <div class="newest-star justify-content-center d-flex mb-3">
+                              <div class="yellow-satr">
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: yellow;font-size: 10px;" ></i>
+                                <i class="fa-solid fa-star" style="color: black;font-size: 10px;" ></i>
+                              </div>
+
+                          </div>
+                          <h3 style="font-size: 12px; color: #8c9aaf;line-height: 20px; ">SAMSUNG Galaxy A22 5G – 64 GB, Grey</h3>
+                          <div class="newest-price align-self-start my-2" style="color: #efcdef ;font-size: 13px;">
+                            <sup>Rs</sup>
+                            <del>60,000</del>
+                          </div>
+                          <div class="newest-price align-self-start my-2" style="color: #ece8ec;font-size: 16px;">
+                            <sup>Rs</sup>
+                            <ind>58,000</ind>
+                            <sub style="color: #bbf7d0;">(-%2)</s>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                
+                
+                
+                
+              </div>
+              <div class="w-100 mt-5 text-center">
+                <button class="btn px-5" style="font-size: 16px; color: #e2e8f0;text-align: center;background-color: #bd2659;">See All Produst</button>
+              </div>
+    
+    </div>
+  </div>
+
+
+
+
+  <!--===================================== sale  code start =======================-->
+  <div id="sale" style="padding: 20px 16px 50px 16px">
+    <div class="container px-1">
+        <div class="row px-0 ">
+            <div class="col-12 my-4">
+                <h2 style="font-size: 32px; color: #e2e8f0;text-align: center;">SpecialSale</h2>
+              </div>
+                    
+            
+                          <div class="col-lg-6 px-0 overflow-hidden ">
+                              <div class="sale-content mx-2 overflow-hidden " style="height: 400px;" >
+                                  <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbanners-img%2Fhome1.webp&w=3840&q=75" alt="" width="100%" height="100%">
+                                  <div class="sale-text h-100 w-sm-50 w-75 d-flex flex-column justify-content-between">
+                                    <div class="top-text py-3 px-3">
+                                      <h3 style="font-size: 22px;color: #4a4c5a;">Larissa Furniture</h3>
+                                      <p style="font-size: 14px;color: #4a4c5acc;">Larissa beautiful sofa with its private design can give a unique beauty to your reception decoration.</p>
+                                      <a href="#" class="btn btn-outline-none mx-4 text-white" style="font-size: 10px;background: #bd2659;">See Product</a>
+
+                                    </div>
+                                  </div>
+                                  <div  class="bottom-text w-100 d-flex justify-content-center align-items-center align-self-center">
+                                      <div  id="timeBack" class="text-center  my-2 py-2 px-0" style="border-radius: 5px; background-color: #0f172a80;">
+                                        <p class="m-0 mb-1" style="color: #e2e8f0;">8</p>
+                                        <span style="color: #e2e8f0;">Days</span>
+                                      </div> 
+                                      <p class="mx-1 my-0 lead">:</p> 
+                                      <div id="timeBack"  class="text-center  my-2 py-2 px-0" style="border-radius: 5px; background-color: #0f172a80;">
+                                        <p class="m-0 mb-1" style="color: #e2e8f0;">23</p>
+                                        <span style="color: #e2e8f0;">Horns</span>
+                                      </div> 
+                                      <p class="mx-1 my-0 lead">:</p> 
+                                      <div  id="timeBack" class="text-center  my-2 py-2 px-0" style="border-radius: 5px; background-color: #0f172a80;">
+                                        <p id="min" class="m-0 mb-1" style="color: #e2e8f0;">48</p>
+                                        <span style="color: #e2e8f0;">Mints</span>
+                                      </div> 
+                                      <p class="mx-1 my-0 lead">:</p> 
+                                      <div id="timeBack"  class="text-center  my-2 py-2 px-0" style="border-radius: 5px; background-color: #0f172a80;">
+                                        <p id="sec" class="m-0 mb-1" style="color: #e2e8f0;">59</p>
+                                        <span style="color: #e2e8f0;">Seconds</span>
+                                      </div> 
+                                      
+                                    
+                                    
+                                </div>
+                          </div>
+                    </div>
+                          <div class="col-lg-6 px-0 overflow-hidden mt-3 mt-lg-0">
+                              <div class="sale-content mx-2 overflow-hidden " style="height: 400px;" >
+                                  <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbanners-img%2Fhome2.webp&w=3840&q=75" alt="" width="100%" height="100%">
+                                  <div class="sale-text h-100 w-sm-50 w-75 d-flex flex-column justify-content-between">
+                                    <div class="top-text py-3 px-3">
+                                      <h3 style="font-size: 22px;color: #4a4c5a;">Romano furniture</h3>
+                                      <p style="font-size: 14px;color: #4a4c5acc;">Romano sofa has an impressive beauty and can multiply the charm of your home decoration.</p>
+                                      <a href="#" class="btn btn-outline-none mx-4 text-white" style="font-size: 11px;background: #bd2659;">See Product</a>
+
+                                    </div>
+                                  </div>
+                                  <div class="bottom-text w-100 d-flex justify-content-center align-items-center align-self-center">
+                                      <div id="timeBack" class="text-center  my-2 py-2 px-0" style="border-radius: 5px;  background-color: #0f172a80;">
+                                        <p class="m-0 mb-1" style="color: #e2e8f0;">6</p>
+                                        <span style="color: #e2e8f0;">Days</span>
+                                      </div> 
+                                      <p class="mx-1 my-0 lead">:</p> 
+                                      <div id="timeBack" class="text-center  my-2 py-2 px-0" style="border-radius: 5px;  background-color: #0f172a80;">
+                                        <p class="m-0 mb-1" style="color: #e2e8f0;">23</p>
+                                        <span style="color: #e2e8f0;">Horns</span>
+                                      </div> 
+                                      <p class="mx-1 my-0 lead">:</p> 
+                                      <div id="timeBack" class="text-center  my-2 py-2 px-0" style="border-radius: 5px; background-color: #0f172a80;">
+                                        <p id="min" class="m-0 mb-1" style="color: #e2e8f0;">48</p>
+                                        <span style="color: #e2e8f0;">Mints</span>
+                                      </div> 
+                                      <p class="mx-1 my-0 lead">:</p> 
+                                      <div id="timeBack" class="text-center  my-2 py-2 px-0" style="border-radius: 5px;  background-color: #0f172a80;">
+                                        <p id="sec" class="m-0 mb-1" style="color: #e2e8f0;">59</p>
+                                        <span style="color: #e2e8f0;">Seconds</span>
+                                      </div> 
+                                      
+                                    
+                                    
+                                </div>
+                          </div>
+                    </div>
+                    
+                    
+                      
+            
+              </div>
+            
+              
+        </div>
+  </div>
+
+
+
+  <!--===================================== subscribe code start =================-->
+
+  <div id="subscribeS" style="padding: 10px 16px 2px 16px;">
+    <div class="container">
+      <div class="row justify-content-between ">
+        <div class="col-lg-6 mt-xl-5 mt-0  d-flex justify-content-center">
+            <div class="scbscribe-content  d-flex align-items-start   flex-column p-xl-5 p-lg-3 " style="max-width: 500px;">
+              <p style="font-size: 15px;color: #e2e8f0;">Subscribe to our newsletter</p>
+              <p style="font-size: 35px;color: white;font-weight: 800 ;">Join Our Mailing List</p>
+              <p style="font-size: 15px;color: #e2e8f0;">
+                Subscribe to your newsletter to stay in the loop. Our newsletter is sent once in a week on every friday to get latest news and updates.
+              </p>
+            
+              <input type="text" name="" id="" style="background-color: #3b3b3b;" placeholder="Enter Your Email " class="w-xl-75 w-100 m-0 mb-2">
+              <button class=" subcribe-btn w-xl-75 w-100 m-0 " style="background-color: #1f2937;">Subcribe</button></form>
+          </div>  
+        </div>
+        <div class="col-lg-6 text-center px-2">
+          <div class="scbscribe-content" style="max-width: 550px;">
+            <img src="https://i.ibb.co/CzGcZF4/pexels-katie-e-3671083-1.png" width="100%" alt="" class="img-fluid mt-lg-0 mt-5">
+          </div>  
+      </div>
+    </div>
+  </div>
+  <div> 
+
+
+
+  <!--===================================== logo code start ==========================-->
+
+  <div id="logo-slider" style="padding: 50px 16px;">
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col my-5">
+            <h2 style="font-size: 32px; color: #e2e8f0;text-align: center;">PopularBrands</h2>
+
+          </div>
+            <div class="col">
+                <div class="logos">
+                    <div class="logo-slide" >
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                      <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                      
+                    </div>
+                    <div class="logo-slide" >
+                    <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                    <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                      <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">                     <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">                     <img src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                        <img  src="https://ecommernce-store.vercel.app/_next/image?url=%2Fimages%2Fbrand-logo-img%2Fadidas.webp&w=640&q=75" alt="" width="171px">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+  <!--================================== footer coding start =========================-->
+
+
+  <footer id="footer">
+        <div class="container-fluid px-0">
+          <hr>
+            <div class="container pt-3 ">
+              <div class="row px-lg-5 px-0">
+                    <div class="col-xl-3 col-lg-4 col-sm-6  ">
+                      <div class="footer-content">
+                        <h3>Shope Online Map</h3>
+                        <ul>
+                        <li>       <a href="btn">AboutsUs</a>
+                        </li>
+                        <li><a href="btn">ContentUS</a></li>
+                        <li> <a href="btn">Sale In OnlineShop</a></li>
+                        <li>
+                          <a href="btn">Career Opportunies</a>
+                        </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 ">
+                      <div class="footer-content">
+                        <h3>customer Services</h3>
+                        <ul>
+                        <li>       <a href="btn">common Questions</a>
+                        </li>
+                        <li><a href="btn">return Procedures</a></li>
+                        <li> <a href="btn">privacy</a></li>                      
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-sm-6 px-0">
+                      <div class="footer-content">
+                        <h3>shopping Guide</h3>
+                        <ul>
+                        <li>       <a href="btn">how To Place An Order</a>
+                        </li>
+                        <li><a href="btn">order Submission Procedure</a></li>
+                        <li> <a href="btn">payment Methods</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-7 pt-3 col-11 pt-0">
+                      <div class="footer-content">
+                        <h4 style="color: #e2e8f0e6;">Be With Us!</h4>
+                        <ul class="d-flex">
+                          <li><a href=""><i class="fa-brands  fa-instagram icon"></i></a></li>
+                          <li><a href=""><i class="fa-brands fa-linkedin icon"></i></a></li>
+                          <li><a href=""><i class="fa-brands fa-square-twitter icon"></i></a></li>
+                          <li><a href=""><i class="fa-regular fa-paper-plane icon"></i></a></li>
+                        </ul>
+                        <h2 style="font-size: 16px;color: #e2e8f0e6;" class=" mt-5 ">Stay up to date with the latest discounts by emailing us</h2>
+                        <div class="input-group px-0 mt-3 ">
+                          <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Amount (to the nearest dollar)">
+                          <span class="input-group-text">Register</span>
+                        </div>      
+                    
+                      </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+  </footer>
+
+
+  <!--======================== subfooter coding start ================================-->
+
+  <div id="subfooter" style="padding: 0px 16px;">
+    <div class="container-fluid  me-0">
+      <hr>
+      <div class="lfooter">
+        <p class="text-center mt-3 ">
+          © 2023 OnlineShop.All rights reserved - Designed and Developed By
+          <a href="http://tazeemp.000webhostapp.com/" target="_blank">Tazeem</a>
+        </p>
+      </div>
+  </div>
+  </div>
+
+
+
+      <!--======================== bootstrap javascript coding end ===================-->
+      
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"
+      ></script>
+  <script>
+    
+$(document).ready(function () {
+  $(".offers-slider").slick({
+    dots: false,
+    infinite: false,
+    speed: 800,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    prevArrow:
+      '<button type="button" class="custom-prev"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow:
+      '<button type="button" class="custom-next"><i class="fas fa-chevron-right"></i></button>',
+    
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: false,
+          prevArrow:
+            '<button type="button" class="custom-prev"><i class="fas fa-chevron-left"></i></button>',
+          nextArrow:
+            '<button type="button" class="custom-next"><i class="fas fa-chevron-right"></i></button>'
+        },
+      },
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: false,
+          prevArrow:
+            '<button type="button" class="custom-prev"><i class="fas fa-chevron-left"></i></button>',
+          nextArrow:
+            '<button type="button" class="custom-next"><i class="fas fa-chevron-right"></i></button>'
+        },
+      },
+      {
+        breakpoint: 786,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+          prevArrow:
+            '<button type="button" class="custom-prev"><i class="fas fa-chevron-left"></i></button>',
+          nextArrow:
+            '<button type="button" class="custom-next"><i class="fas fa-chevron-right"></i></button>'
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      }
+    ],
+  });
+});
+
+  </script>
+      
+      
+
+      <!--==================== my javascript coding end ============================-->
+      <script src="main.js"></script>
+      
+      <!--==================== slider javascript coding end ============================-->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    </body>
+  </html>
